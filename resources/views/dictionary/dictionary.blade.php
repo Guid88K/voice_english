@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en" >
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link id="CSSsource" rel="stylesheet" href="{{asset('css/main.css')}}">
 
-    <title >Title</title>
+    <title>Title</title>
 </head>
-<body class="container-fluid m-0 p-0"  >
-<nav class="navbar navbar-expand-lg ">
+
+<body class=" container-fluid   m-0 p-0">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="Main.html">BlEnglish</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,35 +49,27 @@
             </li>
         </ul>
     </div>
-
 </nav>
 
-<div class="row m-0" id="box3" >
-    <div class="col-md-12 display"
-         style="background-image: url('{{asset('image/bk.png')}}'); height: 610px;background-size: cover; background-position: center;  width: 100%;">
-        <div>
-        </div>
+<div class="row m-0 p-0">
+    <div class="col-md-10 mx-auto mt-3 border shadow pb-3 ">
+        <form class="form-inline mt-3">
+            <input aria-hidden="true" class="form-control mr-sm-2 " type="search" placeholder="Пошук..." aria-label="Search">
+            <button aria-hidden="true" lang="uk" class="btn my-2 my-sm-0 "    type="submit">Пошук</button>
+        </form>
     </div>
 </div>
-
-<div class="row m-0 p-0  " >
-    <div class="col-md-12 " id="box4" >
-        <h2 class="text-center mt-5">Welcome</h2>
-        <div class="row">
-            <div class="col-6 mx-auto"  >
-                <p lang="uk" type="paragraph" class=" text-center mx-5 " >
-                    Ласкаво просимо на сайт для вивчення аглійської мови тут ви можете розвити навички говоріння, вивчити базові поняття,освоїти граматику та поринути у світ іноземної мови.</p>
-                <div class="mx-auto text-center mb-5">
-                    <button type="button" class="btn text-center mx-auto">Warning</button>
-                    <button type="button" class="btn  text-center mx-auto">Warning</button>
-
-                </div>
-
-            </div>
-        </div>
-
+@foreach($dictionary as $d)
+<div class="row m-0">
+    <div class="col-md-10 mx-auto border shadow py-2 DictionaryBg ">
+        <p lang="en" class="my-1 ml-5 text-left font-weight-bold"
+           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">{{$d->word}} - {{$d->translate_word}} </p>
+        <button lang="uk" type="button" class="btn my-1 mr-5 " style="float: right;">Видалити
+        </button>
     </div>
 </div>
+@endforeach
+
 
 
 

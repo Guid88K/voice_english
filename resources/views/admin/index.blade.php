@@ -282,23 +282,25 @@ MAIN CONTENT LAYOUT
             <div class="content-side content-side-full">
                 <ul class="nav-main">
                     <li>
-                        <a class="active" href="db_dark.html"><i class="si si-home"></i><span class="sidebar-mini-hide">Home <span
+                        <a class="active" href="{{asset('/english')}}"><i class="si si-home"></i><span
+                                class="sidebar-mini-hide">Main <span
                                     class="badge badge-pill badge-primary ml-5">3</span></span></a>
                     </li>
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">PR</span><span
                             class="sidebar-mini-hidden">Pages</span></li>
-                    <li>
-                        <a href="{{asset('index')}}"><i class="si si-wallet"></i><span
-                                class="sidebar-mini-hide">Main</span></a>
-                    </li>
+
                     <li>
                         <a href="{{asset('english/speak')}}"><i class="si si-docs"></i><span class="sidebar-mini-hide">Speak</span></a>
                     </li>
                     <li>
-                        <a href=""><i class="si si-users"></i><span class="sidebar-mini-hide">Grammar</span></a>
+                        <a href="{{asset('english/grammar')}}"><i class="si si-users"></i><span class="sidebar-mini-hide">Grammar</span></a>
                     </li>
                     <li>
-                        <a href=""><i class="si si-energy"></i><span class="sidebar-mini-hide">Phonetics</span></a>
+                        <a href="{{asset('english/dictionary')}}"><i class="si si-wallet"></i><span
+                                class="sidebar-mini-hide">Dictionary</span></a>
+                    </li>
+                    <li>
+                        <a href="{{asset('english/phonetics')}}"><i class="si si-energy"></i><span class="sidebar-mini-hide">Phonetics</span></a>
                     </li>
 
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">ST</span><span
@@ -345,11 +347,11 @@ MAIN CONTENT LAYOUT
                     <a href="{{asset('english/speak/create')}}">
                         <button type="button" class="btn btn-dark">Speak</button>
                     </a>
-                    <a href="">
+                    <a href="{{asset('english/grammar/create')}}">
                         <button type="button" class="btn btn-dark">Grammar</button>
                     </a>
-                    <a href="">
-                        <button type="button" class="btn btn-dark">Dicrionary</button>
+                    <a href="{{asset('english/dictionary/create')}}">
+                        <button type="button" class="btn btn-dark">Dictionary</button>
                     </a>
                 </div>
 
@@ -477,65 +479,7 @@ MAIN CONTENT LAYOUT
         <!-- Page Content -->
         <div class="bg-dark text-body-color-dark">
             <div class="content content-top">
-                <div class="row invisible" data-toggle="appear">
-                    <!-- Row #1 -->
-                    <div class="col-6 col-xl-3">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
-                           href="javascript:void(0)">
-                            <div class="block-content block-content-full clearfix">
-                                <div class="float-left mt-10 d-none d-sm-block">
-                                    <i class="si si-bag fa-3x text-muted"></i>
-                                </div>
-                                <div class="font-size-h3 font-w600" data-toggle="countTo" data-speed="1000"
-                                     data-to="1500">0
-                                </div>
-                                <div class="font-size-sm font-w600 text-uppercase text-muted">Sales</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-xl-3">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
-                           href="javascript:void(0)">
-                            <div class="block-content block-content-full clearfix">
-                                <div class="float-left mt-10 d-none d-sm-block">
-                                    <i class="si si-wallet fa-3x text-muted"></i>
-                                </div>
-                                <div class="font-size-h3 font-w600">$<span data-toggle="countTo" data-speed="1000"
-                                                                           data-to="780">0</span></div>
-                                <div class="font-size-sm font-w600 text-uppercase text-muted">Earnings</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-xl-3">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
-                           href="javascript:void(0)">
-                            <div class="block-content block-content-full clearfix">
-                                <div class="float-left mt-10 d-none d-sm-block">
-                                    <i class="si si-envelope-open fa-3x text-muted"></i>
-                                </div>
-                                <div class="font-size-h3 font-w600" data-toggle="countTo" data-speed="1000"
-                                     data-to="15">0
-                                </div>
-                                <div class="font-size-sm font-w600 text-uppercase text-muted">Messages</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-xl-3">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-right"
-                           href="javascript:void(0)">
-                            <div class="block-content block-content-full clearfix">
-                                <div class="float-left mt-10 d-none d-sm-block">
-                                    <i class="si si-users fa-3x text-muted"></i>
-                                </div>
-                                <div class="font-size-h3 font-w600" data-toggle="countTo" data-speed="1000"
-                                     data-to="4252">0
-                                </div>
-                                <div class="font-size-sm font-w600 text-uppercase text-muted">Online</div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- END Row #1 -->
-                </div>
+
                 <div class="row invisible" data-toggle="appear">
                     <!-- Row #2 -->
                     <div class="col-md-6">
@@ -640,185 +584,30 @@ MAIN CONTENT LAYOUT
                     </div>
                     <!-- END Row #2 -->
                 </div>
-                <div class="row invisible" data-toggle="appear">
-                    <!-- Row #3 -->
-                    <div class="col-md-4">
-                        <div class="block block-rounded block-transparent bg-black-op">
-                            <div class="block-content block-content-full">
-                                <div class="py-20 text-center">
-                                    <div class="mb-20">
-                                        <i class="fa fa-envelope-open fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="font-size-h4 font-w600">9.25k Subscribers</div>
-                                    <div class="text-muted">Your main list is growing!</div>
-                                    <div class="pt-20">
-                                        <a class="btn btn-rounded btn-alt-primary" href="javascript:void(0)">
-                                            <i class="fa fa-cog mr-5"></i> Manage list
-                                        </a>
-                                    </div>
-                                </div>
+
+
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="block block-rounded block-transparent bg-black-op">
-                            <div class="block-content block-content-full">
-                                <div class="py-20 text-center">
-                                    <div class="mb-20">
-                                        <i class="fa fa-twitter fa-4x text-info"></i>
-                                    </div>
-                                    <div class="font-size-h4 font-w600">+36 followers</div>
-                                    <div class="text-muted">You are doing great!</div>
-                                    <div class="pt-20">
-                                        <a class="btn btn-rounded btn-alt-info" href="javascript:void(0)">
-                                            <i class="fa fa-users mr-5"></i> Check them out
-                                        </a>
-                                    </div>
-                                </div>
+                    <div class="col-sm-3">
+                        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Light card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="block block-rounded block-transparent bg-black-op">
-                            <div class="block-content block-content-full">
-                                <div class="py-20 text-center">
-                                    <div class="mb-20">
-                                        <i class="fa fa-check fa-4x text-success"></i>
-                                    </div>
-                                    <div class="font-size-h4 font-w600">Business Plan</div>
-                                    <div class="text-muted">This is your current active plan</div>
-                                    <div class="pt-20">
-                                        <a class="btn btn-rounded btn-alt-success" href="javascript:void(0)">
-                                            <i class="fa fa-arrow-up mr-5"></i> Upgrade to VIP
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END Row #3 -->
-                </div>
-                <div class="row invisible" data-toggle="appear">
-                    <!-- Row #4 -->
-                    <div class="col-md-6">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light overflow-hidden"
-                           href="javascript:void(0)">
-                            <div class="block-content block-content-full">
-                                <i class="si si-briefcase fa-2x text-muted"></i>
-                                <div class="row py-20">
-                                    <div class="col-6 text-right border-white-op-r">
-                                        <div class="invisible" data-toggle="appear" data-class="animated fadeInLeft">
-                                            <div class="font-size-h3 font-w600">16</div>
-                                            <div class="font-size-sm font-w600 text-uppercase text-muted">Projects</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="invisible" data-toggle="appear" data-class="animated fadeInRight">
-                                            <div class="font-size-h3 font-w600">2</div>
-                                            <div class="font-size-sm font-w600 text-uppercase text-muted">Active</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light overflow-hidden"
-                           href="javascript:void(0)">
-                            <div class="block-content block-content-full">
-                                <div class="text-right">
-                                    <i class="si si-users fa-2x text-muted"></i>
-                                </div>
-                                <div class="row py-20">
-                                    <div class="col-6 text-right border-white-op-r">
-                                        <div class="invisible" data-toggle="appear" data-class="animated fadeInLeft">
-                                            <div class="font-size-h3 font-w600 text-info">63250</div>
-                                            <div class="font-size-sm font-w600 text-uppercase text-muted">Accounts</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="invisible" data-toggle="appear" data-class="animated fadeInRight">
-                                            <div class="font-size-h3 font-w600 text-success">97%</div>
-                                            <div class="font-size-sm font-w600 text-uppercase text-muted">Active</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- END Row #4 -->
-                </div>
-                <div class="row invisible" data-toggle="appear">
-                    <!-- Row #5 -->
-                    <div class="col-6 col-md-4 col-xl-2">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center"
-                           href="be_pages_generic_inbox.html">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-success ribbon-left">
-                                <div class="ribbon-box">15</div>
-                                <p class="mt-5">
-                                    <i class="si si-envelope-letter fa-3x text-muted"></i>
-                                </p>
-                                <p class="font-w600">Inbox</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-2">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center"
-                           href="be_pages_generic_profile.html">
-                            <div class="block-content">
-                                <p class="mt-5">
-                                    <i class="si si-user fa-3x text-muted"></i>
-                                </p>
-                                <p class="font-w600">Profile</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-2">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center"
-                           href="be_pages_forum_categories.html">
-                            <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-left">
-                                <div class="ribbon-box">3</div>
-                                <p class="mt-5">
-                                    <i class="si si-bubbles fa-3x text-muted"></i>
-                                </p>
-                                <p class="font-w600">Forum</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-2">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center"
-                           href="be_pages_generic_search.html">
-                            <div class="block-content">
-                                <p class="mt-5">
-                                    <i class="si si-magnifier fa-3x text-muted"></i>
-                                </p>
-                                <p class="font-w600">Search</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-2">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center"
-                           href="be_comp_charts.html">
-                            <div class="block-content">
-                                <p class="mt-5">
-                                    <i class="si si-bar-chart fa-3x text-muted"></i>
-                                </p>
-                                <p class="font-w600">Live Stats</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-2">
-                        <a class="block block-rounded block-transparent bg-black-op text-body-color-light text-center"
-                           href="javascript:void(0)">
-                            <div class="block-content">
-                                <p class="mt-5">
-                                    <i class="si si-settings fa-3x text-muted"></i>
-                                </p>
-                                <p class="font-w600">Settings</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- END Row #5 -->
                 </div>
             </div>
         </div>
@@ -828,20 +617,20 @@ MAIN CONTENT LAYOUT
     <!-- END Main Container -->
 
     <!-- Footer -->
-    <footer id="page-footer" class="bg-primary-darker text-body-color-light opacity-0">
-        <div class="content py-20 font-size-xs clearfix">
-            <div class="float-right">
-                Crafted with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600"
-                                                                          href="https://1.envato.market/ydb"
-                                                                          target="_blank">pixelcave</a>
-            </div>
-            <div class="float-left">
-                <a class="font-w600" href="https://1.envato.market/95j" target="_blank">Codebase 3.1</a> &copy; <span
-                    class="js-year-copy"></span>
-            </div>
-        </div>
-    </footer>
-    <!-- END Footer -->
+{{--    <footer id="page-footer" class="bg-primary-darker text-body-color-light opacity-0">--}}
+{{--        <div class="content py-20 font-size-xs clearfix">--}}
+{{--            <div class="float-right">--}}
+{{--                Crafted with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600"--}}
+{{--                                                                          href="https://1.envato.market/ydb"--}}
+{{--                                                                          target="_blank">pixelcave</a>--}}
+{{--            </div>--}}
+{{--            <div class="float-left">--}}
+{{--                <a class="font-w600" href="https://1.envato.market/95j" target="_blank">Codebase 3.1</a> &copy; <span--}}
+{{--                    class="js-year-copy"></span>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </footer>--}}
+<!-- END Footer -->
 </div>
 <!-- END Page Container -->
 

@@ -19,16 +19,16 @@
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="Speak.html">Говоріння</a>
+                <a class="nav-link mx-5" lang="uk" href="{{asset('english/speak')}}">Говоріння</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Grammar.html">Граматика</a>
+                <a class="nav-link" lang="uk" href="{{asset('english/grammar')}}">Граматика</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Phonetics.html">Фонетика</a>
+                <a class="nav-link" lang="uk" href="{{asset('english/phonetics')}}">Фонетика</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Dictionary.html">Слова</a>
+                <a class="nav-link" lang="uk" href="{{asset('english/dictionary')}}">Слова</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -50,28 +50,12 @@
 <div class="row m-0 p-0">
 
     <div class="col-md-12 my-4">
-        <h2 class="text-center mb-3">Функції дієслова to be</h2>
-        <p class="px-5 mb-4">Дієслово to be вживається для вираження присутності, наявності, місцезнаходження, опису якостей та властивостей предметів, а також для утворення граматичних конструкцій на позначення часу та пасивного стану з іншими дієсловами.
-
-            В українській мові дієслово to be часто оминається на відміну від англійської мови, в якій to be ніколи не опускається, адже в цьому випадку речення стане граматично неправильним та може загубити своє значення.</p>
-        <p>В реченні дієслово to be може вживатися в якості смислового дієслова, дієслова-зв'язки, допоміжного дієслова або ж у модальній конструкції to be to.</p>
+        <h2 class="text-center mb-3">{{$grammar->title}}</h2>
+        {!! $grammar->content !!}
 
     </div>
 </div>
-<div class="row m-0 p-0">
-    <div class="col-md-12">
-        <h2 lang="uk" class="text-center mb-3">Фрази</h2>
 
-        <p>В якості допоміжного дієслова to be не має свого власного лексичного значення, тому він не перекладається українською мовою. Форми дієслова to be (а також його третя форма been) використовуються для утворення певних граматичних конструкцій та форм: утворення пасивного стану та тривалих часів (Present Continuous, Present Perfect Continuous, Past Continuous, Past Perfect Continuous, Future Continuous, Future Perfect Continuous).</p>
-        <p>I’m working now. – Я зараз працюю.</p>
-        <p>I was working when Jack came. – Я працювала, коли прийшов Джек.</p>
-        <p>I have been working here for 6 months. – Я працюю тут 6 місяців.</p>
-        <p>I will be working at 8 tomorrow. – Завтра о 8-й я буду працювати.</p>
-
-
-    </div>
-
-</div>
 <div class="row m-0 p-0">
     <div class="col-md-11 ">
         <p></p>

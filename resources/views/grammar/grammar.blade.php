@@ -19,20 +19,21 @@
 
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item " lang="ru">
-                <a class="nav-link mx-5" href="Speak.html">Говоріння</a>
+            <li class="nav-item ">
+                <a class="nav-link mx-5" lang="uk" href="{{asset('english/speak')}}">Говоріння</a>
             </li>
-            <li class="nav-item mx-5" lang="ru">
-                <a class="nav-link" href="Grammar.html">Граматика</a>
+            <li class="nav-item mx-5">
+                <a class="nav-link" lang="uk" href="{{asset('english/grammar')}}">Граматика</a>
             </li>
-            <li class="nav-item mx-5" lang="ru">
-                <a class="nav-link" href="Phonetics.html">Фонетика</a>
+            <li class="nav-item mx-5">
+                <a class="nav-link" lang="uk" href="{{asset('english/phonetics')}}">Фонетика</a>
             </li>
-            <li class="nav-item mx-5" lang="ru">
-                <a class="nav-link" href="Dictionary.html">Слова</a>
+            <li class="nav-item mx-5">
+                <a class="nav-link" lang="uk" href="{{asset('english/dictionary')}}">Слова</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
                     Типи дальтонізму
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -48,97 +49,16 @@
     </div>
 
 </nav>
-
+@foreach($grammar as $g)
 <div class="row m-0">
     <div class="col-md-10 mx-auto my-3   border shadow ">
         <p lang="en" class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Verb be</p>
-        <button lang="uk" type="button" class="btn my-5 mr-5 "  onClick='location.href="VerbBe.html"' style="float: right;">Перейти до вивчення
+           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">{{$g->title}}</p>
+        <button lang="uk" type="button" class="btn my-5 mr-5 "  onClick='location.href="{{route('grammar.show',$g->id)}}"' style="float: right;">Перейти до вивчення
         </button>
     </div>
 </div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Possessive determiners</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Present Simple</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Adverbs of frequency</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">There is / There are</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Can / Can't</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Past simple</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Going to</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-<div class="row m-0">
-    <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">Would like...</p>
-
-        <button type="button" class="btn my-5 mr-5 " style="float: right;">Перейти до вивчення
-        </button>
-    </div>
-</div>
-
-
+@endforeach
 
 <script rel="script" src="{{asset('js/sr.js')}}"></script>
 <script
