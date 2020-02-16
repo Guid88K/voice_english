@@ -19,17 +19,17 @@
 
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item " lang="ru">
-                <a class="nav-link mx-5" href="Speak.html">Говоріння</a>
+            <li class="nav-item ">
+                <a class="nav-link mx-5" lang="uk" href="{{asset('english/speak')}}">Говоріння</a>
             </li>
-            <li class="nav-item mx-5" lang="ru">
-                <a class="nav-link" href="Grammar.html">Граматика</a>
+            <li class="nav-item mx-5">
+                <a class="nav-link" lang="uk" href="{{asset('english/grammar')}}">Граматика</a>
             </li>
-            <li class="nav-item mx-5" lang="ru">
-                <a class="nav-link" href="Phonetics.html">Фонетика</a>
+            <li class="nav-item mx-5">
+                <a class="nav-link" lang="uk" href="{{asset('english/phonetics')}}">Фонетика</a>
             </li>
-            <li class="nav-item mx-5" lang="ru">
-                <a class="nav-link" href="Dictionary.html">Слова</a>
+            <li class="nav-item mx-5">
+                <a class="nav-link" lang="uk" href="{{asset('english/dictionary')}}">Слова</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -37,18 +37,12 @@
                     Типи дальтонізму
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"
-                       onclick="document.getElementById('CSSsource').href='{{asset('css/main.css')}}'" href="#">Звичайний
+                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/main.css')}}'" href="#">Звичайний
                         режим</a>
-                    <a class="dropdown-item"
-                       onclick="document.getElementById('CSSsource').href='{{asset('css/pro.css')}}'"
-                       href="#">Пронатоп</a>
-                    <a class="dropdown-item"
-                       onclick="document.getElementById('CSSsource').href='{{asset('css/deta.css')}}'" href="#">Дейтараноп</a>
-                    <a class="dropdown-item"
-                       onclick="document.getElementById('CSSsource').href='{{asset('css/trina.css')}}'" href="#">Тринатоп</a>
-                    <a class="dropdown-item"
-                       onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
+                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/pro.css')}}'" href="#">Пронатоп</a>
+                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/deta.css')}}'" href="#">Дейтараноп</a>
+                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/trina.css')}}'" href="#">Тринатоп</a>
+                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
         </ul>

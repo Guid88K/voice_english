@@ -31,7 +31,6 @@
 
     <!-- Page JS Plugins CSS -->
 
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/js/plugins/simplemde/simplemde.min.css')}}">
 
     <!-- Fonts and Codebase framework -->
@@ -298,14 +297,16 @@ MAIN CONTENT LAYOUT
                         <a href="{{asset('english/speak')}}"><i class="si si-docs"></i><span class="sidebar-mini-hide">Speak</span></a>
                     </li>
                     <li>
-                        <a href="{{asset('english/grammar')}}"><i class="si si-users"></i><span class="sidebar-mini-hide">Grammar</span></a>
+                        <a href="{{asset('english/grammar')}}"><i class="si si-users"></i><span
+                                class="sidebar-mini-hide">Grammar</span></a>
                     </li>
                     <li>
                         <a href="{{asset('english/dictionary')}}"><i class="si si-wallet"></i><span
                                 class="sidebar-mini-hide">Dictionary</span></a>
                     </li>
                     <li>
-                        <a href="{{asset('english/phonetics')}}"><i class="si si-energy"></i><span class="sidebar-mini-hide">Phonetics</span></a>
+                        <a href="{{asset('english/phonetics')}}"><i class="si si-energy"></i><span
+                                class="sidebar-mini-hide">Phonetics</span></a>
                     </li>
 
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">ST</span><span
@@ -484,25 +485,21 @@ MAIN CONTENT LAYOUT
 
         <div class="content">
 
-            <h2 class="content-heading">Add speak lesson</h2>
-            <form method="post" action="{{ route('speak.store') }}" enctype="multipart/form-data">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        @csrf
-                        <label for="name">Заголовок</label>
-                        <input type="text" autocomplete="off" class="form-control" name="title"/>
+            <h2 class="content-heading">Add word and translate</h2>
+            <form method="post" action="{{ route('dictionary.store') }}" enctype="multipart/form-data">
+                @csrf
+                <div class="row container2">
+                    <div class="col-4">
+                        <input type="text" name="word[]" class="form-control" placeholder="word">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="text">Текст</label>
-                                <textarea class="form-control summernote" name="detail"></textarea>
-                            </div>
+                    <div class="col-4">
+                        <input type="text" name="translate_word[]" class="form-control" placeholder="translate_word">
+                    </div>
+                    <div class="input-group-prepend">
+                        <div class="input-group-text  add_form_field_copy">
+                            <i class="fa fa-plus text-dark"></i>
                         </div>
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-dark">Сохранить</button>
@@ -554,24 +551,66 @@ MAIN CONTENT LAYOUT
     webpack is putting everything together at assets/_es6/main/app.js
 -->
 <script src="{{asset('assets/js/codebase.app.min.js')}}"></script>
-
-<!-- Page JS Plugins -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
-
-
-<!-- Page JS Helpers (Summernote + CKEditor + SimpleMDE plugins) -->
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
-        $('.summernote').summernote({
-            height: 600,
-            dialogsInBody: true,
-            callbacks: {
-                onInit: function () {
-                    $('body > .note-popover').hide();
-                }
-            },
+        var max_fields = 100;
+        var wrapper2 = $(".container2");
+        var add_button1 = $(".add_form_field_copy");
+
+
+        var y = 1;
+        $(add_button1).click(function (e) {
+            e.preventDefault();
+            if (y < max_fields) {
+                y++;
+                $(wrapper2).append('<div class="block-content">' +
+                    '<div class="row container2">\n' +
+                    '                    <div class="col-4">\n' +
+                    '                        <input type="text" name="word[]" class="form-control" placeholder="word">\n' +
+                    '                    </div>\n' +
+                    '                    <div class="col-4">\n' +
+                    '                        <input type="text" name="translate_word[]" class="form-control" placeholder="translate_word">\n' +
+                    '                    </div>\n' +
+                    '                    <div class="input-group-prepend delete">\n' +
+                    '                        <div class="input-group-text  add_form_field_copy1 ">\n' +
+                    '                            <i class="fa fa-minus text-dark"></i>\n' +
+                    '                        </div>\n' +
+                    '                    </div>\n' +
+                    '                </div>'  +
+                    '            </div>' +
+
+
+                    // '<div class="input-group mb-3">\n' +
+                    // '<div class="col-md-7 p-0">\n' +
+                    // '<input type="text" class="form-control"\n' +
+                    // 'aria-label="Text input with checkbox" name="ing[]"/>\n' +
+                    // '</div>\n' +
+                    // '<input\n' +
+                    // 'type="text" class="form-control col-xs-2 ml-3"\n' +
+                    // 'aria-label="Text input with checkbox" name="count[]"/>\n' +
+                    // '<input\n' +
+                    // 'type="text" class="form-control col-xs-2 ml-3 mr-3"\n' +
+                    // 'aria-label="Text input with checkbox" name="kind[]"/>\n' +
+                    // '<div class="input-group-prepend delete">\n' +
+                    // '<div class="input-group-text  ">\n' +
+                    // '<i class="fa fa-minus text-dark"></i>\n' +
+                    // '</div>\n' +
+                    // '</div>\n' +
+                    // '</div>                                    ' +
+                    // '</div>' +
+                    ''
+                ); //add input box
+            } else {
+                alert('You Reached the limits')
+            }
+        });
+        $(wrapper2).on("click", ".delete", function (e) {
+            e.preventDefault();
+            $(this).parent('div').remove();
+            y--;
         });
     });
 </script>
+
 </body>
 </html>

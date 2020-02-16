@@ -19,16 +19,16 @@
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="Speak.html">Говоріння</a>
+                <a class="nav-link mx-5" lang="uk" href="{{asset('english/speak')}}">Говоріння</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Grammar.html">Граматика</a>
+                <a class="nav-link" lang="uk" href="{{asset('english/grammar')}}">Граматика</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Phonetics.html">Фонетика</a>
+                <a class="nav-link" lang="uk" href="{{asset('english/phonetics')}}">Фонетика</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Dictionary.html">Слова</a>
+                <a class="nav-link" lang="uk" href="{{asset('english/dictionary')}}">Слова</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"

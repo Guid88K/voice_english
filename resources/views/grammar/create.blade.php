@@ -484,8 +484,8 @@ MAIN CONTENT LAYOUT
 
         <div class="content">
 
-            <h2 class="content-heading">Add speak lesson</h2>
-            <form method="post" action="{{ route('speak.store') }}" enctype="multipart/form-data">
+            <h2 class="content-heading">Add grammar lesson</h2>
+            <form method="post" action="{{ route('grammar.store') }}" enctype="multipart/form-data">
                 <div class="col-md-6">
                     <div class="form-group">
                         @csrf
