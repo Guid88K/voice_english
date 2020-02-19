@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('english/phonetics');
 });
 Route::get('/dictionary', function () {
     return view('pages.dictionary');
