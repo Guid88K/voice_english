@@ -11,7 +11,7 @@
 
 <body class=" container-fluid m-0 p-0">
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="Main.html">BlEnglish</a>
+    <a class="navbar-brand"  href="{{url('/english')}}">BlEnglish</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,16 +20,16 @@
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="{{asset('english/speak')}}">Говоріння</a>
+                <a class="nav-link mx-5" lang="uk" href="{{url('english/speak')}}">Говоріння</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{asset('english/grammar')}}">Граматика</a>
+                <a class="nav-link" lang="uk" href="{{url('english/grammar')}}">Граматика</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{asset('english/phonetics')}}">Фонетика</a>
+                <a class="nav-link" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{asset('english/dictionary')}}">Слова</a>
+                <a class="nav-link" lang="uk" href="{{url('english/dictionary')}}">Слова</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -52,7 +52,7 @@
 @foreach($grammar as $g)
 <div class="row m-0">
     <div class="col-md-10 mx-auto my-3   border shadow ">
-        <p lang="en" class="my-5 ml-5 text-left font-weight-bold"
+        <p lang="en" class=" GrammarText my-5 ml-5 text-left font-weight-bold"
            style="display: inline-block; font-size: 20px; letter-spacing: 2px;">{{$g->title}}</p>
         <button lang="uk" type="button" class="btn my-5 mr-5 "  onClick='location.href="{{route('grammar.show',$g->id)}}"' style="float: right;">Перейти до вивчення
         </button>

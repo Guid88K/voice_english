@@ -1,0 +1,18 @@
+.SpeakText{
+    font-size: 30px;
+    display: inline-block;
+}
+
+li, p, h3{
+    font-size: 25px;
+
+}
+nav{
+    background-color: black;
+}
+.GrammarText{
+    font-size: 30px;
+    margin: 0;
+    display: inline-block;
+
+}

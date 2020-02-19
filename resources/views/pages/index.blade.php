@@ -11,7 +11,7 @@
 </head>
 <body class="container-fluid m-0 p-0"  >
 <nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="Main.html">BlEnglish</a>
+    <a class="navbar-brand" href="{{url('/english')}}">BlEnglish</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,16 +20,16 @@
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="Speak.html">Говоріння</a>
+                <a class="nav-link mx-5" lang="uk" href="{{url('/english/speak')}}">Говоріння</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Grammar.html">Граматика</a>
+                <a class="nav-link" lang="uk" href="{{url('/english/grammar')}}">Граматика</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="Phonetics.html">Фонетика</a>
+                <a class="nav-link" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
             <li class="nav-item mx-5" >
-                <a class="nav-link" lang="uk" href="Dictionary.html">Слова</a>
+                <a class="nav-link" lang="uk" href="{{url('/english/dictionary')}}">Слова</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,14 +44,17 @@
                     <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
+            <li>
+                <button type="button" onclick="document.getElementById('CSSsource').href='{{asset('css/Uppertext.css')}}'" class="btn text-center mx-auto">CSS</button>
+            </li>
         </ul>
     </div>
 
 </nav>
 
 <div class="row m-0" id="box3" >
-    <div class="col-md-12 display"
-         style="background-image: url('{{asset('image/bk.png')}}'); height: 610px;background-size: cover; background-position: center;  width: 100%;">
+    <div class="col-md-12 display "
+         style="background-image: url('{{asset('image/ny.png')}}'); height: 610px;background-size: cover; background-position: center;  width: 100%;">
         <div>
         </div>
     </div>
@@ -61,12 +64,12 @@
     <div class="col-md-12 " id="box4" >
         <h2 class="text-center mt-5">Welcome</h2>
         <div class="row">
-            <div class="col-6 mx-auto"  >
+            <div class="col-md-6 mx-auto"  >
                 <p lang="uk" type="paragraph" class=" text-center mx-5 " >
                     Ласкаво просимо на сайт для вивчення аглійської мови тут ви можете розвити навички говоріння, вивчити базові поняття,освоїти граматику та поринути у світ іноземної мови.</p>
                 <div class="mx-auto text-center mb-5">
-                    <button type="button" class="btn text-center mx-auto">Warning</button>
-                    <button type="button" class="btn  text-center mx-auto">Warning</button>
+                    <button type="button" class="btn text-center mx-auto">Перейти до вивчення</button>
+
 
                 </div>
 

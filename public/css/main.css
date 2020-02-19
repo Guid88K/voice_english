@@ -30,3 +30,14 @@ color: #01161E;
     color: #E8E8E8;
     background-color: #9E9E9E;
 }
+.SpeakText{
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.GrammarText{
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
