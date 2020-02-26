@@ -222,4 +222,3 @@
     document.addEventListener( 'keydown', keyDownHandler );
     }( document ) );
 
-responsiveVoice.speak("hello world");

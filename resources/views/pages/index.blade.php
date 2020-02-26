@@ -10,6 +10,12 @@
     <title >Title</title>
 </head>
 <body class="container-fluid m-0 p-0"  >
+<iframe src="{{asset('music/s.mp3')}}" allow="autoplay" id="audio" style="display: none"></iframe>
+<audio autoplay loop  id="playAudio">
+    <source src="{{asset('music/audio_2020-02-19_22-12-09.ogg')}}">
+</audio>
+
+{{--<audio id="player" autoplay controls><source src="{{asset('music/a-car.mp3')}}" type="audio/mp3"></audio>--}}
 <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand" href="{{url('/english')}}">BlEnglish</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -90,5 +96,6 @@
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
 </body>
 </html>

@@ -69,14 +69,13 @@
         <h3>Короткий звук</h3>
     </div>
     <div class="col-md-12">
-
-        <button class="shortvowel btn" onclick="new Audio('music/i-fish.mp3').play(); return false;">ɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/a-cat.mp3').play(); return false;">æ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/o-clock.mp3').play(); return false;">ɒ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/a-computer.mp3').play(); return false;">ɔ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/e-egg.mp3').play(); return false;">e</button>
-        <button class="shortvowel btn" onclick="new Audio('music/u-up.mp3').play(); return false;">ʌ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/u-bul.mp3').play(); return false;">ʊ</button>
+        <button class="shortvowel btn" onclick="new Audio(('{{asset('music/i-fish.mp3')}}')).play(); return false;">ɪ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-cat.mp3')}}').play(); return false;">æ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-clock.mp3')}}').play(); return false;">ɒ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-computer.mp3')}}').play(); return false;">ɔ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/e-egg.mp3')}}').play(); return false;">e</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-up.mp3')}}').play(); return false;">ʌ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-bul.mp3')}}').play(); return false;">ʊ</button>
     </div>
 </div>
 
@@ -86,11 +85,11 @@
         <h3>Довгий звук</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('music/ii-tree.mp3').play(); return false;">ɪ:</button>
-        <button class="shortvowel btn" onclick="new Audio('music/a-car.mp3').play(); return false;">a:</button>
-        <button class="shortvowel btn" onclick="new Audio('music/ur-bird.mp3').play(); return false;">ɛ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/u-boot.mp3').play(); return false;">u;</button>
-        <button class="shortvowel btn" onclick="new Audio('music/o-hourse.mp3').play(); return false;">ɔ:</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ii-tree.mp3')}}').play(); return false;">ɪ:</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-car.mp3')}}').play(); return false;">a:</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ur-bird.mp3')}}').play(); return false;">ɛ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-boot.mp3')}}').play(); return false;">u;</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-hourse.mp3')}}').play(); return false;">ɔ:</button>
     </div>
 </div>
 
@@ -99,14 +98,14 @@
         <h3>Дивтонги</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('music/ai-train.mp3').play(); return false;">ei</button>
-        <button class="shortvowel btn" onclick="new Audio('music/o-phone.mp3').play(); return false;">əʊ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/i-bike.mp3').play(); return false;">ai</button>
-        <button class="shortvowel btn" onclick="new Audio('music/ou-ou.mp3').play(); return false;">aʊ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/oy-boy.mp3').play(); return false;">ɔɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/ea-ear.mp3').play(); return false;">əɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/ai-chair.mp3').play(); return false;">eə</button>
-        <button class="shortvowel btn" onclick="new Audio('music/ou-tourist.mp3').play(); return false;">ʊə</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ai-train.mp3')}}').play(); return false;">ei</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-phone.mp3')}}').play(); return false;">əʊ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/i-bike.mp3')}}').play(); return false;">ai</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ou-ou.mp3')}}').play(); return false;">aʊ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/oy-boy.mp3')}}').play(); return false;">ɔɪ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ea-ear.mp3')}}').play(); return false;">əɪ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ai-chair.mp3')}}').play(); return false;">eə</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ou-tourist.mp3')}}').play(); return false;">ʊə</button>
     </div>
 </div>
 
@@ -129,13 +128,13 @@
         <h3>Короткий звук</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('music/i-fish.mp3').play(); return false;">ɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/a-cat.mp3').play(); return false;">æ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/o-clock.mp3').play(); return false;">ɒ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/a-computer.mp3').play(); return false;">ɔ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/e-egg.mp3').play(); return false;">e</button>
-        <button class="shortvowel btn" onclick="new Audio('music/u-up.mp3').play(); return false;">ʌ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/u-bul.mp3').play(); return false;">ʊ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/i-fish.mp3')}}').play(); return false;">ɪ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-cat.mp3')}}').play(); return false;">æ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-clock.mp3')}}').play(); return false;">ɒ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-computer.mp3')}}').play(); return false;">ɔ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/e-egg.mp3')}}').play(); return false;">e</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-up.mp3')}}').play(); return false;">ʌ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-bul.mp3')}}').play(); return false;">ʊ</button>
     </div>
 </div>
 
@@ -145,11 +144,11 @@
         <h3>Довгий звук</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('music/ii-tree.mp3').play(); return false;">ɪ:</button>
-        <button class="shortvowel btn" onclick="new Audio('music/a-car.mp3').play(); return false;">a:</button>
-        <button class="shortvowel btn" onclick="new Audio('music/ur-bird.mp3').play(); return false;">ɛ</button>
-        <button class="shortvowel btn" onclick="new Audio('music/u-boot.mp3').play(); return false;">u;</button>
-        <button class="shortvowel btn" onclick="new Audio('music/o-hourse.mp3').play(); return false;">ɔ:</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ii-tree.mp3')}}').play(); return false;">ɪ:</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-car.mp3')}}').play(); return false;">a:</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ur-bird.mp3')}}').play(); return false;">ɛ</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-boot.mp3')}}').play(); return false;">u;</button>
+        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-hourse.mp3')}}').play(); return false;">ɔ:</button>
     </div>
 </div>
 

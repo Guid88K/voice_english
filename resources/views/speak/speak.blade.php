@@ -56,6 +56,7 @@
 @foreach($speak as $s)
     <div class="row m-0">
         <div class="col-md-10 mx-auto my-3   border shadow ">
+            <img class="" style="width: 150px; height: 120px;" src="{{asset('image/undraw_by_the_road_4rfk.svg')}}">
             <p  class=" SpeakText my-5 ml-5 text-left font-weight-bold">{{$s->title}} </p>
             <button lang="uk" type="button" class="btn my-5 mr-5 " onClick='location.href="{{route('speak.show',$s->id)}}"'
                     style="float: right;">Перейти до вивчення
