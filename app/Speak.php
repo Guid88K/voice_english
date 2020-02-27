@@ -8,6 +8,7 @@ class Speak extends Model
 {
     protected $fillable = [
         'title',
-        'content'
+        'content',
+        'image'
     ];
 }

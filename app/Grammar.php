@@ -8,6 +8,7 @@ class Grammar extends Model
 {
     protected $fillable = [
         'title',
-        'content'
+        'content',
+        'image'
     ];
 }

@@ -26,7 +26,6 @@ Route::get('english/phonetics', function () {
 });
 
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -37,3 +36,4 @@ Route::resource('/admin/english', 'AdminController');
 Route::resource('/english/speak', 'SpeakController');
 Route::resource('/english/grammar', 'GrammarController');
 Route::resource('/english/dictionary', 'DictionaryController');
+Route::get('find', 'WordSearchController@search');
