@@ -27,6 +27,17 @@ p{
     background-color: darkblue;
 }
 
+.SpeakText{
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.GrammarText{
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
 /*p,h2,.nav-link{*/
 /*    font-size: 30px;*/
 /*}*/

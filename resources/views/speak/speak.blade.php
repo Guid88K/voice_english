@@ -45,9 +45,10 @@
                     <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
-            <li>
-                <button type="button" onclick="document.getElementById('CSSsource').href='{{asset('css/Uppertext.css')}}'" class="btn text-center mx-auto">CSS</button>
-            </li>
+
+            <li>   <button type="button"     class="btn text-center mx-3" id="increaseFont">More</button></li>
+            <li> <button type="button"     class="btn text-center mx-auto"  id="default" >По умолчанию</button></li>
+
         </ul>
     </div>
 
@@ -56,9 +57,9 @@
 @foreach($speak as $s)
     <div class="row m-0">
         <div class="col-md-10 mx-auto my-3   border shadow ">
-            <img class="" style="width: 150px; height: 120px;" src="{{asset('image/undraw_by_the_road_4rfk.svg')}}">
-            <p  class=" SpeakText my-5 ml-5 text-left font-weight-bold">{{$s->title}} </p>
-            <button lang="uk" type="button" class="btn my-5 mr-5 " onClick='location.href="{{route('speak.show',$s->id)}}"'
+            <img class="" style="width: 150px; height: 120px; background-color: green;" src="{{asset('image/undraw_by_the_road_4rfk.svg')}}">
+            <p  class=" SpeakText my-5 txt ml-5 text-left font-weight-bold">{{$s->title}} </p>
+            <button lang="uk" type="button" class="btn na my-5 mr-5 " onClick='location.href="{{route('speak.show',$s->id)}}"'
                     style="float: right;">Перейти до вивчення
             </button>
         </div>

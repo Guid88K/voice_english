@@ -27,6 +27,7 @@ color: #01161E;
 }
 
 .btn{
+
     color: #E8E8E8;
     background-color: #9E9E9E;
 }
@@ -40,4 +41,17 @@ color: #01161E;
     display: inline-block;
     font-size: 20px;
     letter-spacing: 2px;
+}
+
+.custom-switch::after {
+
+
+
+    font-size: 25px;
+
+
+
+
+
+
 }

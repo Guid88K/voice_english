@@ -45,6 +45,9 @@
                     <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
+            <li>   <button type="button"     class="btn text-center mx-auto" id="increaseFont">More</button></li>
+            <li> <button type="button"     class="btn text-center mx-auto"  id="default" >По умолчанию</button></li>
+
         </ul>
     </div>
 

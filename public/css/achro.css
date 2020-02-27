@@ -29,3 +29,15 @@ p{
 .DictionaryBg{
     background-color: #686868;
 }
+
+.SpeakText{
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.GrammarText{
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}

@@ -222,3 +222,66 @@
     document.addEventListener( 'keydown', keyDownHandler );
     }( document ) );
 
+// var body = document.getElementsByTagName('body')[0];
+// var btn = document.getElementsByClassName('na')[0];
+// var btnMain = document.getElementsByClassName('nax')[0];
+// var txt = document.getElementsByClassName('txt')[0];
+// var decFnt = document.getElementById('decreaseFont');
+// var incFnt = document.getElementById('increaseFont');
+// var defFont = body.style.fontSize;
+// var setDefFnt = document.getElementById('default');
+//
+// var getFontSize = function (b) {
+//     return parseFloat(getComputedStyle(b, null).fontSize);
+// };
+//
+//
+// incFnt.addEventListener('click', function(){
+//
+//     body.style.fontSize = getFontSize(body) + 140+'%';
+//     btn.style.fontSize = getFontSize(btn) +10+'px';
+//     txt.style.fontSize = getFontSize(txt)+10+'px';
+//     btnMain.style.fontSize = getFontSize(btnMain)+10+'px';
+//
+//
+// }, false);
+//
+//
+// setDefFnt.addEventListener('click', function(){
+//     body.style.fontSize = defFont;
+//     btn.style.fontSize = defFont;
+//     txt.style.fontSize = defFont;
+// }, false);
+//
+
+var min=16;
+var max=22;
+function plusSize() {
+    var p  = document.getElementsByClassName('p');
+    for(i=0;i<p.length;i++) {
+        if(p[i].style.fontSize) {
+            var s = parseInt(p[i].style.fontSize.replace("px",""));
+        } else {
+            var s = 16;
+        }
+        if(s!=max) {
+            s += 2;
+        }
+        p[i].style.fontSize = s+"px"
+    }
+}
+function minusSize() {
+    var p = document.getElementsByClassName('p');
+    for(i=0;i<p.length;i++) {
+        if(p[i].style.fontSize) {
+            var s = parseInt(p[i].style.fontSize.replace("px",""));
+        } else {
+            var s = 16;
+        }
+        if(s!=min) {
+            s -= 2;
+        }
+        p[i].style.fontSize = s+"px"
+    }
+}
+

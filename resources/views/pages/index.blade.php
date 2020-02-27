@@ -10,10 +10,10 @@
     <title >Title</title>
 </head>
 <body class="container-fluid m-0 p-0"  >
-<iframe src="{{asset('music/s.mp3')}}" allow="autoplay" id="audio" style="display: none"></iframe>
-<audio autoplay loop  id="playAudio">
-    <source src="{{asset('music/audio_2020-02-19_22-12-09.ogg')}}">
-</audio>
+{{--<iframe src="{{asset('music/s.mp3')}}" allow="autoplay" id="audio" style="display: none"></iframe>--}}
+{{--<audio autoplay loop  id="playAudio">--}}
+{{--    <source src="{{asset('music/audio_2020-02-19_22-12-09.ogg')}}">--}}
+{{--</audio>--}}
 
 {{--<audio id="player" autoplay controls><source src="{{asset('music/a-car.mp3')}}" type="audio/mp3"></audio>--}}
 <nav class="navbar navbar-expand-lg ">
@@ -26,18 +26,18 @@
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="{{url('/english/speak')}}">Говоріння</a>
+                <a class="nav-link mx-5 p" lang="uk" href="{{url('/english/speak')}}">Говоріння</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('/english/grammar')}}">Граматика</a>
+                <a class="nav-link p" lang="uk" href="{{url('/english/grammar')}}">Граматика</a>
             </li>
-            <li class="nav-item mx-5">
+            <li class="nav-item mx-5 p">
                 <a class="nav-link" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
-            <li class="nav-item mx-5" >
+            <li class="nav-item mx-5 p" >
                 <a class="nav-link" lang="uk" href="{{url('/english/dictionary')}}">Слова</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown p">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Типи дальтонізму
                 </a>
@@ -50,17 +50,20 @@
                     <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
-            <li>
-                <button type="button" onclick="document.getElementById('CSSsource').href='{{asset('css/Uppertext.css')}}'" class="btn text-center mx-auto">CSS</button>
-            </li>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+
+            <li>   <button type="button"     class="btn  text-center mx-3" onclick="minusSize()" >  - </button></li>
+            <li>   <button type="button"     class="btn  text-center mx-3" onclick="plusSize()" > +</button></li>
         </ul>
     </div>
 
 </nav>
 
 <div class="row m-0" id="box3" >
-    <div class="col-md-12 display "
-         style="background-image: url('{{asset('image/ny.png')}}'); height: 610px;background-size: cover; background-position: center;  width: 100%;">
+    <div class="col-md-6 mx-auto display ">
+
+         <img class="img-fluid mx-auto" src="{{asset('image/london-animation-small.gif')}}">
+{{--         style="background-image: url('{{asset('image/london-animation-small.gif')}}'); height: 610px;background-size: cover; background-position: center;  width: 100%;">--}}
         <div>
         </div>
     </div>
@@ -68,13 +71,13 @@
 
 <div class="row m-0 p-0  " >
     <div class="col-md-12 " id="box4" >
-        <h2 class="text-center mt-5">Welcome</h2>
+        <h2 class="text-center mt-5  txt " >Welcome</h2>
         <div class="row">
             <div class="col-md-6 mx-auto"  >
-                <p lang="uk" type="paragraph" class=" text-center mx-5 " >
+                <p lang="uk" type="paragraph" class="p text-center mx-5 " >
                     Ласкаво просимо на сайт для вивчення аглійської мови тут ви можете розвити навички говоріння, вивчити базові поняття,освоїти граматику та поринути у світ іноземної мови.</p>
                 <div class="mx-auto text-center mb-5">
-                    <button type="button" class="btn text-center mx-auto">Перейти до вивчення</button>
+                    <button type="button" class="btn p text-center mx-auto" >Перейти до вивчення</button>
 
 
                 </div>
