@@ -493,6 +493,10 @@ MAIN CONTENT LAYOUT
                         <input type="text" autocomplete="off" class="form-control" name="title"/>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+                </div>
                 <div class="row">
                     <div class="col">
                         <div class="modal-body">

@@ -55,8 +55,8 @@
 @foreach($grammar as $g)
 <div class="row m-0">
     <div class="col-md-10 mx-auto my-3   border shadow ">
-        <img class="" style="width: 150px; height: 120px;" src="{{asset('image/undraw_by_the_road_4rfk.svg')}}">
-        <p lang="en" class=" GrammarText my-5 ml-5 text-left font-weight-bold"
+        <img src="{{ asset('upload/'.$g->image)}}" class="img-fluid" alt="">
+        <p lang="en" class="my-5 ml-5 text-left font-weight-bold"
            style="display: inline-block; font-size: 20px; letter-spacing: 2px;">{{$g->title}}</p>
         <button lang="uk" type="button" class="btn my-5 mr-5 "  onClick='location.href="{{route('grammar.show',$g->id)}}"' style="float: right;">Перейти до вивчення
         </button>

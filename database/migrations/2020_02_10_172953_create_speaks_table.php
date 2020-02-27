@@ -15,6 +15,7 @@ class CreateSpeaksTable extends Migration
     {
         Schema::create('speaks', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image');
             $table->string('title');
             $table->longText('content');
             $table->timestamps();

@@ -39,6 +39,11 @@ class SpeakController extends Controller
     {
         $speak = new Speak();
         $speak->title = $request->title;
+        $file = $request->file('image');
+        $destinationPath = 'upload';
+        $file->move($destinationPath, $file->getClientOriginalName());
+        $speak->image = $file->getClientOriginalName();
+
         $detail = $request->input('detail');
         $dom = new DomDocument();
         $dom->loadHtml($detail, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);

@@ -56,12 +56,13 @@
 
 <div class="row m-0 p-0">
     <div class="col-md-10 mx-auto mt-3 border shadow pb-3 ">
-        <form class="form-inline mt-3">
-            <input aria-hidden="true" class="form-control mr-sm-2 " type="search" placeholder="Пошук..." aria-label="Search">
+        <form  class="form-inline mt-3" action="{{url('/find')}}" method="get">
+            <input aria-hidden="true"  class="form-control mr-sm-2 " name="word" type="search" placeholder="Пошук..." aria-label="Search">
             <button aria-hidden="true" lang="uk" class="btn my-2 my-sm-0 "    type="submit">Пошук</button>
         </form>
     </div>
 </div>
+@if(isset($dictionary))
 @foreach($dictionary as $d)
 <div class="row m-0">
     <div class="col-md-10 mx-auto border shadow py-2 DictionaryBg ">
@@ -72,6 +73,7 @@
     </div>
 </div>
 @endforeach
+@endif
 
 
 

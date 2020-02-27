@@ -15,6 +15,7 @@ class CreateGrammarsTable extends Migration
     {
         Schema::create('grammars', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image');
             $table->string('title');
             $table->longText('content');
             $table->timestamps();
