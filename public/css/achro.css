@@ -6,7 +6,7 @@
     background-color: #686868;
 }
 
-.h2{
+.h1{
     color: #E8E8E8;
 }
 
@@ -16,6 +16,10 @@ p{
 
 .nav-link{
     color: #BFBFBF;
+}
+
+.nav-link:hover{
+    color: #e9ecef;
 }
 
 .navbar-brand{
@@ -40,4 +44,8 @@ p{
     display: inline-block;
     font-size: 20px;
     letter-spacing: 2px;
+}
+
+#search{
+    background-color: #4c110f;
 }

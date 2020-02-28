@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link id="CSSsource" rel="stylesheet" href="{{asset('css/main.css')}}">
-
+    <link rel="stylesheet" href="{{asset('fonts/font-awesome.min.css')}}">
     <title >Title</title>
 </head>
 <body class="container-fluid m-0 p-0"  >
@@ -25,40 +25,47 @@
 
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item ">
-                <a class="nav-link mx-5 p" lang="uk" href="{{url('/english/speak')}}">Говоріння</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link  p" lang="uk" href="{{url('/english/speak')}}">Говоріння</a>
             </li>
-            <li class="nav-item mx-5">
+            <li class="nav-item mx-xl-5 mx-lg-2">
                 <a class="nav-link p" lang="uk" href="{{url('/english/grammar')}}">Граматика</a>
             </li>
-            <li class="nav-item mx-5 p">
-                <a class="nav-link" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link p" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
-            <li class="nav-item mx-5 p" >
-                <a class="nav-link" lang="uk" href="{{url('/english/dictionary')}}">Слова</a>
+            <li class="nav-item mx-xl-5  mx-lg-2" >
+                <a class="nav-link p" lang="uk" href="{{url('/english/dictionary')}}">Слова</a>
             </li>
-            <li class="nav-item dropdown p">
+            <li class="nav-item dropdown  mx-xl-5  mx-lg-2 p">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Типи дальтонізму
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/main.css')}}'" href="#">Звичайний
+                    <a class="dropdown-item p" onclick="document.getElementById('CSSsource').href='{{asset('css/main.css')}}'" href="#">Звичайний
                         режим</a>
-                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/pro.css')}}'" href="#">Пронатоп</a>
-                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/deta.css')}}'" href="#">Дейтараноп</a>
-                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/trina.css')}}'" href="#">Тринатоп</a>
-                    <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
+                    <a class="dropdown-item p" onclick="document.getElementById('CSSsource').href='{{asset('css/pro.css')}}'" href="#">Пронатоп</a>
+                    <a class="dropdown-item p" onclick="document.getElementById('CSSsource').href='{{asset('css/deta.css')}}'" href="#">Дейтараноп</a>
+                    <a class="dropdown-item p" onclick="document.getElementById('CSSsource').href='{{asset('css/trina.css')}}'" href="#">Тринатоп</a>
+                    <a class="dropdown-item p" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class=" fa-2x fa fa-user-circle"></i>
+                </a>
 
-            <li>   <button type="button"     class="btn  text-center mx-3" onclick="minusSize()" >  - </button></li>
-            <li>   <button type="button"     class="btn  text-center mx-3" onclick="plusSize()" > +</button></li>
+            </li>
         </ul>
     </div>
 
 </nav>
-
+<div class="row m-0">
+    <div class="col-md-12 text-right my-2">
+          <button type="button"     class="btn  text-center  mx-xl-1  " style="display: inline-block" onclick="plusSize()" >Збільштити</button>
+            <button type="button"     class="btn  text-center " style="display: inline-block"  onclick="minusSize()" >Зменшити</button>
+    </div>
+</div>
 <div class="row m-0" id="box3" >
     <div class="col-md-6 mx-auto display ">
 
@@ -71,7 +78,7 @@
 
 <div class="row m-0 p-0  " >
     <div class="col-md-12 " id="box4" >
-        <h2 class="text-center mt-5  txt " >Welcome</h2>
+        <h1 class="text-center mt-5  txt " >Welcome</h1>
         <div class="row">
             <div class="col-md-6 mx-auto"  >
                 <p lang="uk" type="paragraph" class="p text-center mx-5 " >

@@ -3,10 +3,10 @@
 }
 
 #box4{
-    background-color: #1d2124;
+    background-color: #e9ecef;
 }
-h2{
-    color: #0b2e13;
+h1{
+    color: #01161E;
 }
 
 p{
@@ -16,7 +16,9 @@ color: #01161E;
 .nav-link{
     color: #e9ecef;!important;
 }
-
+.nav-link:hover{
+    color: #e9ecef;
+}
 .DictionaryBg{
     background-color: white;
 }
@@ -43,15 +45,10 @@ color: #01161E;
     letter-spacing: 2px;
 }
 
-.custom-switch::after {
+.fa-user-circle{
 
-
-
-    font-size: 25px;
-
-
-
-
-
-
+  color: #e9ecef;
+}
+#search{
+    background-color: #ffffff;
 }

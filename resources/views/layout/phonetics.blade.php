@@ -18,19 +18,19 @@
 
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="{{url('english/speak')}}">Говоріння</a>
+            <li class="nav-item  mx-xl-5 mx-lg-2">
+                <a class="nav-link p " lang="uk" href="{{url('english/speak')}}">Говоріння</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/grammar')}}">Граматика</a>
+            <li class="nav-item mx-xl-5 mx-lg-2">
+                <a class="nav-link p" lang="uk" href="{{url('english/grammar')}}">Граматика</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link p" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/dictionary')}}">Слова</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link p" lang="uk" href="{{url('english/dictionary')}}">Слова</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item mx-xl-5 mx-lg-2 p dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     Типи дальтонізму
@@ -44,18 +44,20 @@
                     <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
-            <li>   <button type="button"     class="btn text-center mx-3" id="increaseFont">More</button></li>
-            <li> <button type="button"     class="btn text-center mx-auto"  id="default" >По умолчанию</button></li>
-
         </ul>
     </div>
 
 </nav>
-
+<div class="row m-0">
+    <div class="col-md-10 mx-auto  text-right my-2">
+        <button type="button"     class="btn  text-center  mx-xl-1  " style="display: inline-block" onclick="plusSize()" >Збільштити</button>
+        <button type="button"     class="btn  text-center " style="display: inline-block"  onclick="minusSize()" >Зменшити</button>
+    </div>
+</div>
 
 <div class="row  m-0 p-0 ">
-    <div class="col-md-12 my-4 text-center">
-        <p lang="uk">
+    <div class="col-md-10 mx-auto my-4 text-left">
+        <p lang="uk" class="p">
             В англійськiй мовi всього 44 звукiв, які поділяються на голосні (vowels), приголосні (consonants). Голосні й
             приголосні можуть утворювати комбінації, включаючи дифтонги (diphthongs). Голосні звуки в англійській мові
             розрізняються по довготі на короткі (short vowels) і довгі (long vowels), а приголосні можна розділити на глухі
@@ -69,16 +71,16 @@
 
 <div class="row  m-0 p-0">
     <div class="col-md-12">
-        <h3>Короткий звук</h3>
+        <h3 class="p">Короткий звук</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio(('{{asset('music/i-fish.mp3')}}')).play(); return false;">ɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-cat.mp3')}}').play(); return false;">æ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-clock.mp3')}}').play(); return false;">ɒ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-computer.mp3')}}').play(); return false;">ɔ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/e-egg.mp3')}}').play(); return false;">e</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-up.mp3')}}').play(); return false;">ʌ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-bul.mp3')}}').play(); return false;">ʊ</button>
+        <button class="shortvowel p btn" onclick="new Audio(('{{asset('music/i-fish.mp3')}}')).play(); return false;">ɪ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/a-cat.mp3')}}').play(); return false;">æ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/o-clock.mp3')}}').play(); return false;">ɒ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/a-computer.mp3')}}').play(); return false;">ɔ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/e-egg.mp3')}}').play(); return false;">e</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/u-up.mp3')}}').play(); return false;">ʌ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/u-bul.mp3')}}').play(); return false;">ʊ</button>
     </div>
 </div>
 
@@ -88,11 +90,11 @@
         <h3>Довгий звук</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ii-tree.mp3')}}').play(); return false;">ɪ:</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-car.mp3')}}').play(); return false;">a:</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ur-bird.mp3')}}').play(); return false;">ɛ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-boot.mp3')}}').play(); return false;">u;</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-hourse.mp3')}}').play(); return false;">ɔ:</button>
+        <button class="shortvowel p  btn" onclick="new Audio('{{asset('music/ii-tree.mp3')}}').play(); return false;">ɪ:</button>
+        <button class="shortvowel  p btn" onclick="new Audio('{{asset('music/a-car.mp3')}}').play(); return false;">a:</button>
+        <button class="shortvowel p  btn" onclick="new Audio('{{asset('music/ur-bird.mp3')}}').play(); return false;">ɛ</button>
+        <button class="shortvowel  p btn" onclick="new Audio('{{asset('music/u-boot.mp3')}}').play(); return false;">u;</button>
+        <button class="shortvowel p  btn" onclick="new Audio('{{asset('music/o-hourse.mp3')}}').play(); return false;">ɔ:</button>
     </div>
 </div>
 
@@ -101,20 +103,20 @@
         <h3>Дивтонги</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ai-train.mp3')}}').play(); return false;">ei</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-phone.mp3')}}').play(); return false;">əʊ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/i-bike.mp3')}}').play(); return false;">ai</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ou-ou.mp3')}}').play(); return false;">aʊ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/oy-boy.mp3')}}').play(); return false;">ɔɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ea-ear.mp3')}}').play(); return false;">əɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ai-chair.mp3')}}').play(); return false;">eə</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ou-tourist.mp3')}}').play(); return false;">ʊə</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ai-train.mp3')}}').play(); return false;">ei</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/o-phone.mp3')}}').play(); return false;">əʊ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/i-bike.mp3')}}').play(); return false;">ai</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ou-ou.mp3')}}').play(); return false;">aʊ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/oy-boy.mp3')}}').play(); return false;">ɔɪ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ea-ear.mp3')}}').play(); return false;">əɪ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ai-chair.mp3')}}').play(); return false;">eə</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ou-tourist.mp3')}}').play(); return false;">ʊə</button>
     </div>
 </div>
 
 <div class="row m-0 p-0">
     <div class="col-md-12 my-4 text-center">
-        <p lang="uk">
+        <p lang="uk" class="p">
             В англійськiй мовi всього 44 звукiв, які поділяються на голосні (vowels), приголосні (consonants). Голосні й
             приголосні можуть утворювати комбінації, включаючи дифтонги (diphthongs). Голосні звуки в англійській мові
             розрізняються по довготі на короткі (short vowels) і довгі (long vowels), а приголосні можна розділити на глухі
@@ -122,22 +124,23 @@
             або дзвінким. Не будемо заглиблюватися в фонетику, так як на початковому етапі цієї інформації цілком достатньо.
             Розглянемо таблицю звуків англійської мови:
         </p>
-        <h2>Приголосні звуки</h2>
+        <h2 class="p">Приголосні звуки</h2>
     </div>
 </div>
 
+
 <div class="row  m-0 p-0">
     <div class="col-md-12">
-        <h3>Короткий звук</h3>
+        <h3 class="p">Короткий звук</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/i-fish.mp3')}}').play(); return false;">ɪ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-cat.mp3')}}').play(); return false;">æ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-clock.mp3')}}').play(); return false;">ɒ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-computer.mp3')}}').play(); return false;">ɔ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/e-egg.mp3')}}').play(); return false;">e</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-up.mp3')}}').play(); return false;">ʌ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-bul.mp3')}}').play(); return false;">ʊ</button>
+        <button class="shortvowel p btn" onclick="new Audio(('{{asset('music/i-fish.mp3')}}')).play(); return false;">ɪ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/a-cat.mp3')}}').play(); return false;">æ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/o-clock.mp3')}}').play(); return false;">ɒ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/a-computer.mp3')}}').play(); return false;">ɔ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/e-egg.mp3')}}').play(); return false;">e</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/u-up.mp3')}}').play(); return false;">ʌ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/u-bul.mp3')}}').play(); return false;">ʊ</button>
     </div>
 </div>
 
@@ -147,15 +150,29 @@
         <h3>Довгий звук</h3>
     </div>
     <div class="col-md-12">
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ii-tree.mp3')}}').play(); return false;">ɪ:</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/a-car.mp3')}}').play(); return false;">a:</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/ur-bird.mp3')}}').play(); return false;">ɛ</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/u-boot.mp3')}}').play(); return false;">u;</button>
-        <button class="shortvowel btn" onclick="new Audio('{{asset('music/o-hourse.mp3')}}').play(); return false;">ɔ:</button>
+        <button class="shortvowel p  btn" onclick="new Audio('{{asset('music/ii-tree.mp3')}}').play(); return false;">ɪ:</button>
+        <button class="shortvowel  p btn" onclick="new Audio('{{asset('music/a-car.mp3')}}').play(); return false;">a:</button>
+        <button class="shortvowel p  btn" onclick="new Audio('{{asset('music/ur-bird.mp3')}}').play(); return false;">ɛ</button>
+        <button class="shortvowel  p btn" onclick="new Audio('{{asset('music/u-boot.mp3')}}').play(); return false;">u;</button>
+        <button class="shortvowel p  btn" onclick="new Audio('{{asset('music/o-hourse.mp3')}}').play(); return false;">ɔ:</button>
     </div>
 </div>
 
-
+<div class="row  m-0 p-0">
+    <div class="col-md-12">
+        <h3>Дивтонги</h3>
+    </div>
+    <div class="col-md-12">
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ai-train.mp3')}}').play(); return false;">ei</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/o-phone.mp3')}}').play(); return false;">əʊ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/i-bike.mp3')}}').play(); return false;">ai</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ou-ou.mp3')}}').play(); return false;">aʊ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/oy-boy.mp3')}}').play(); return false;">ɔɪ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ea-ear.mp3')}}').play(); return false;">əɪ</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ai-chair.mp3')}}').play(); return false;">eə</button>
+        <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ou-tourist.mp3')}}').play(); return false;">ʊə</button>
+    </div>
+</div>
 
 
 <script rel="script" src="{{asset('js/sr.js')}}"></script>

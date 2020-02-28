@@ -21,19 +21,19 @@
 
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="{{url('english/speak')}}">Говоріння</a>
+            <li class="nav-item  mx-xl-5 mx-lg-2">
+                <a class="nav-link p " lang="uk" href="{{url('english/speak')}}">Говоріння</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/grammar')}}">Граматика</a>
+            <li class="nav-item mx-xl-5 mx-lg-2">
+                <a class="nav-link p" lang="uk" href="{{url('english/grammar')}}">Граматика</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link p" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/dictionary')}}">Слова</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link p" lang="uk" href="{{url('english/dictionary')}}">Слова</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item mx-xl-5 mx-lg-2 p dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     Типи дальтонізму
@@ -47,18 +47,20 @@
                     <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
-            <li>   <button type="button"     class="btn text-center mx-3" id="increaseFont">More</button></li>
-            <li> <button type="button"     class="btn text-center mx-auto"  id="default" >По умолчанию</button></li>
-
         </ul>
     </div>
 </nav>
-
+<div class="row m-0">
+    <div class="col-md-10 mx-auto  text-right my-2">
+        <button type="button"     class="btn  text-center  mx-xl-1  " style="display: inline-block" onclick="plusSize()" >Збільштити</button>
+        <button type="button"     class="btn  text-center " style="display: inline-block"  onclick="minusSize()" >Зменшити</button>
+    </div>
+</div>
 <div class="row m-0 p-0">
-    <div class="col-md-10 mx-auto mt-3 border shadow pb-3 ">
+    <div class="col-md-10 mx-auto  border shadow pb-3 " id="search">
         <form  class="form-inline mt-3" action="{{url('/find')}}" method="get">
             <input aria-hidden="true"  class="form-control mr-sm-2 " name="word" type="search" placeholder="Пошук..." aria-label="Search">
-            <button aria-hidden="true" lang="uk" class="btn my-2 my-sm-0 "    type="submit">Пошук</button>
+            <button aria-hidden="true" lang="uk" class="btn p my-2 my-sm-0 "    type="submit">Пошук</button>
         </form>
     </div>
 </div>
@@ -66,9 +68,9 @@
 @foreach($dictionary as $d)
 <div class="row m-0">
     <div class="col-md-10 mx-auto border shadow py-2 DictionaryBg ">
-        <p lang="en" class="my-1 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">{{$d->word}} - {{$d->translate_word}} </p>
-        <button lang="uk" type="button" class="btn my-1 mr-5 " style="float: right;">Видалити
+        <p lang="en" class="mt-2 p ml-5 text-left font-weight-bold"
+           style="display: inline-block;  letter-spacing: 2px;">{{$d->word}} - {{$d->translate_word}} </p>
+        <button lang="uk" type="button" class="btn p my-1 mr-5 " style="float: right;">Видалити
         </button>
     </div>
 </div>

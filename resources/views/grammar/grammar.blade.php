@@ -19,19 +19,19 @@
 
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-            <li class="nav-item ">
-                <a class="nav-link mx-5" lang="uk" href="{{url('english/speak')}}">Говоріння</a>
+            <li class="nav-item  mx-xl-5 mx-lg-2">
+                <a class="nav-link p " lang="uk" href="{{url('english/speak')}}">Говоріння</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/grammar')}}">Граматика</a>
+            <li class="nav-item mx-xl-5 mx-lg-2">
+                <a class="nav-link p" lang="uk" href="{{url('english/grammar')}}">Граматика</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link p" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
-            <li class="nav-item mx-5">
-                <a class="nav-link" lang="uk" href="{{url('english/dictionary')}}">Слова</a>
+            <li class="nav-item mx-xl-5 mx-lg-2 ">
+                <a class="nav-link p" lang="uk" href="{{url('english/dictionary')}}">Слова</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item mx-xl-5 mx-lg-2 p dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     Типи дальтонізму
@@ -45,20 +45,23 @@
                     <a class="dropdown-item" onclick="document.getElementById('CSSsource').href='{{asset('css/achro.css')}}'" href="#">Ахроматопсія</a>
                 </div>
             </li>
-            <li>   <button type="button"     class="btn text-center mx-auto" id="increaseFont">More</button></li>
-            <li> <button type="button"     class="btn text-center mx-auto"  id="default" >По умолчанию</button></li>
-
         </ul>
     </div>
 
 </nav>
+<div class="row m-0">
+    <div class="col-md-10 mx-auto  text-right my-2">
+        <button type="button"     class="btn  text-center  mx-xl-1  " style="display: inline-block" onclick="plusSize()" >Збільштити</button>
+        <button type="button"     class="btn  text-center " style="display: inline-block"  onclick="minusSize()" >Зменшити</button>
+    </div>
+</div>
 @foreach($grammar as $g)
 <div class="row m-0">
     <div class="col-md-10 mx-auto my-3   border shadow ">
-        <img src="{{ asset('upload/'.$g->image)}}" class="img-fluid" alt="">
-        <p lang="en" class="my-5 ml-5 text-left font-weight-bold"
-           style="display: inline-block; font-size: 20px; letter-spacing: 2px;">{{$g->title}}</p>
-        <button lang="uk" type="button" class="btn my-5 mr-5 "  onClick='location.href="{{route('grammar.show',$g->id)}}"' style="float: right;">Перейти до вивчення
+        <img src="{{ asset('upload/'.$g->image)}}" class="img-fluid p-3" style="width: 300px; height: 150px;" alt="">
+        <p lang="en" class="my-5 ml-5 p text-left font-weight-bold"
+           style="display: inline-block;  letter-spacing: 2px;">{{$g->title}}</p>
+        <button lang="uk" type="button" class="btn my-5 mr-5 p"  onClick='location.href="{{route('grammar.show',$g->id)}}"' style="float: right;">Перейти до вивчення
         </button>
     </div>
 </div>

@@ -6,7 +6,7 @@
      background-color: #20c997;
  }
 
-.h2{
+.h1{
     color: #0b2e13;
 }
 
@@ -17,6 +17,10 @@ p{
 .nav-link{
      color: #007bff;
  }
+
+.nav-link:hover{
+    color: #e9ecef;
+}
 
 .btn{
     color: #F2D7EE;
@@ -38,6 +42,7 @@ p{
     font-size: 20px;
     letter-spacing: 2px;
 }
-/*p,h2,.nav-link{*/
-/*    font-size: 30px;*/
-/*}*/
+
+#search{
+    background-color: #4c110f;
+}

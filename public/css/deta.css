@@ -6,6 +6,10 @@
     color: #69306D;
 }
 
+.nav-link:hover{
+    color: #e9ecef;
+}
+
 #box4{
     background-color: #A5668B;
 }
@@ -14,7 +18,7 @@
     color: #69306D;
 }
 
-h2{
+h1{
     color: #D3BCC0;
 }
 
@@ -40,4 +44,8 @@ color: #D3BCC0;
     display: inline-block;
     font-size: 20px;
     letter-spacing: 2px;
+}
+
+#search{
+    background-color: #4c110f;
 }

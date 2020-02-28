@@ -205,7 +205,7 @@
             return false;
         }
 
-        if ( evt.altKey && evt.keyCode === 39 ) {
+        if ( evt.altKey && evt.keyCode === 40 ) {
             evt.preventDefault();
 
             moveFocus( evt.shiftKey ? -1 : 1 );
