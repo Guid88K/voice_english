@@ -10,11 +10,11 @@
     <title >Title</title>
 </head>
 <body class="container-fluid m-0 p-0"  >
-{{--<iframe src="{{asset('music/s.mp3')}}" allow="autoplay" id="audio" style="display: none"></iframe>--}}
+
 {{--<audio autoplay loop  id="playAudio">--}}
 {{--    <source src="{{asset('music/audio_2020-02-19_22-12-09.ogg')}}">--}}
 {{--</audio>--}}
-
+{{--onclick=" new Audio('music/audio_2020-02-19_22-12-09.ogg').play(1)"--}}
 {{--<audio id="player" autoplay controls><source src="{{asset('music/a-car.mp3')}}" type="audio/mp3"></audio>--}}
 <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand" href="{{url('/english')}}">BlEnglish</a>
@@ -26,18 +26,18 @@
     <div class="collapse  navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item mx-xl-5 mx-lg-2 ">
-                <a class="nav-link  p" lang="uk" href="{{url('/english/speak')}}">Говоріння</a>
+                <a class="nav-link  " lang="uk" href="{{url('/english/speak')}}">Говоріння</a>
             </li>
             <li class="nav-item mx-xl-5 mx-lg-2">
-                <a class="nav-link p" lang="uk" href="{{url('/english/grammar')}}">Граматика</a>
+                <a class="nav-link " lang="uk" href="{{url('/english/grammar')}}">Граматика</a>
             </li>
             <li class="nav-item mx-xl-5 mx-lg-2 ">
-                <a class="nav-link p" lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
+                <a class="nav-link " lang="uk" href="{{url('english/phonetics')}}">Фонетика</a>
             </li>
             <li class="nav-item mx-xl-5  mx-lg-2" >
-                <a class="nav-link p" lang="uk" href="{{url('/english/dictionary')}}">Слова</a>
+                <a class="nav-link " lang="uk" href="{{url('/english/dictionary')}}">Слова</a>
             </li>
-            <li class="nav-item dropdown  mx-xl-5  mx-lg-2 p">
+            <li class="nav-item dropdown  mx-xl-5  mx-lg-2 ">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Типи дальтонізму
                 </a>
@@ -51,8 +51,8 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link">
-                    <i class=" fa-2x fa fa-user-circle"></i>
+                <a class="nav-link" href="{{url('/account')}}" >
+                    <i class=" fa fa-user-circle" href="{{url('/english/account')}}" style="font-size: 25px;"></i>
                 </a>
 
             </li>
@@ -60,16 +60,16 @@
     </div>
 
 </nav>
-<div class="row m-0">
-    <div class="col-md-12 text-right my-2">
-          <button type="button"     class="btn  text-center  mx-xl-1  " style="display: inline-block" onclick="plusSize()" >Збільштити</button>
-            <button type="button"     class="btn  text-center " style="display: inline-block"  onclick="minusSize()" >Зменшити</button>
+<div class="row btnplusminus  m-0">
+    <div class="col-md-12  text-right my-2">
+        <button type="button"     class="btn  text-center  mx-xl-1"  style="display: inline-block" onclick="plusSize()" ><b>Збільшитити</b></button>
+        <button type="button"     class="btn  text-center " style="display: inline-block"  onclick="minusSize()" ><b>Зменшити</b></button>
     </div>
 </div>
-<div class="row m-0" id="box3" >
-    <div class="col-md-6 mx-auto display ">
+<div class="row  m-0" id="box3" >
+    <div class="col-md-10 mx-auto">
 
-         <img class="img-fluid mx-auto" src="{{asset('image/london-animation-small.gif')}}">
+         <img class=" img-fluid mx-auto d-block " src="{{asset('image/london-animation-small.gif')}}">
 {{--         style="background-image: url('{{asset('image/london-animation-small.gif')}}'); height: 610px;background-size: cover; background-position: center;  width: 100%;">--}}
         <div>
         </div>
@@ -78,12 +78,12 @@
 
 <div class="row m-0 p-0  " >
     <div class="col-md-12 " id="box4" >
-        <h1 class="text-center mt-5  txt " >Welcome</h1>
+        <h1 class="text-center mt-5   txt " >Welcome</h1>
         <div class="row">
             <div class="col-md-6 mx-auto"  >
-                <p lang="uk" type="paragraph" class="p text-center mx-5 " >
+                <p lang="uk" type="paragraph" class="p my-2 text-center mx-5 " >
                     Ласкаво просимо на сайт для вивчення аглійської мови тут ви можете розвити навички говоріння, вивчити базові поняття,освоїти граматику та поринути у світ іноземної мови.</p>
-                <div class="mx-auto text-center mb-5">
+                <div class="mx-auto text-center my-4">
                     <button type="button" class="btn p text-center mx-auto" >Перейти до вивчення</button>
 
 

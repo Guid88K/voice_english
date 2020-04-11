@@ -25,6 +25,8 @@ Route::get('english/phonetics', function () {
     return view('layout.phonetics');
 });
 
+Route::get('/account',function(){
+    return view('layout.account');});
 
 Auth::routes();
 
@@ -37,3 +39,5 @@ Route::resource('/english/speak', 'SpeakController');
 Route::resource('/english/grammar', 'GrammarController');
 Route::resource('/english/dictionary', 'DictionaryController');
 Route::get('find', 'WordSearchController@search');
+
+

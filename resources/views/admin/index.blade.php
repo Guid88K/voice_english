@@ -84,7 +84,7 @@ MAIN CONTENT LAYOUT
     'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
 -->
 <div id="page-container"
-     class="sidebar-o sidebar-inverse enable-page-overlay side-scroll page-header-fixed page-header-glass page-header-inverse main-content-boxed">
+     class="sidebar-o bg-dark sidebar-inverse enable-page-overlay side-scroll page-header-fixed page-header-glass page-header-inverse main-content-boxed">
 
     <!-- Side Overlay-->
     <aside id="side-overlay">
@@ -118,16 +118,16 @@ MAIN CONTENT LAYOUT
             <div class="block pull-t pull-r-l">
                 <div class="block-content block-content-full block-content-sm bg-primary">
                     <div class="row text-center">
-                        <div class="col-4">
-                            <div class="font-size-sm font-w600 text-uppercase text-white-op">Sales</div>
+                        <div class="col-4 p-1">
+                            <div class="font-size-sm font-w600 text-uppercase text-white-op">Пройдено уроків</div>
                             <div class="font-size-h4 text-white">985</div>
                         </div>
-                        <div class="col-4">
-                            <div class="font-size-sm font-w600 text-uppercase text-white-op">Tickets</div>
+                        <div class="col-4 p-1">
+                            <div class="font-size-sm font-w600 text-uppercase text-white-op">Вивчено слів</div>
                             <div class="font-size-h4 text-white">251</div>
                         </div>
-                        <div class="col-4">
-                            <div class="font-size-sm font-w600 text-uppercase text-white-op">Projects</div>
+                        <div class="col-4 p-1">
+                            <div class="font-size-sm font-w600  text-uppercase text-white-op">Залишилось уроків</div>
                             <div class="font-size-h4 text-white">39</div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@ MAIN CONTENT LAYOUT
             <!-- Notifications -->
             <div class="block pull-r-l">
                 <div class="block-header bg-body-light">
-                    <h3 class="block-title">Notifications</h3>
+                    <h3 class="block-title">Деталі</h3>
                     <div class="block-options">
                         <button type="button" class="btn-block-option" data-toggle="block-option"
                                 data-action="state_toggle" data-action-mode="demo">
@@ -170,7 +170,7 @@ MAIN CONTENT LAYOUT
                     <ul class="list list-activity">
                         <li>
                             <i class="si si-wallet text-success"></i>
-                            <div class="font-w600">+$29 New sale</div>
+                            <div class="font-w600">+$29</div>
                             <div>
                                 <a href="javascript:void(0)">Admin Template</a>
                             </div>
@@ -178,7 +178,7 @@ MAIN CONTENT LAYOUT
                         </li>
                         <li>
                             <i class="si si-close text-danger"></i>
-                            <div class="font-w600">Project removed</div>
+                            <div class="font-w600">Удалений проект</div>
                             <div>
                                 <a href="javascript:void(0)">Best Icon Set</a>
                             </div>
@@ -186,7 +186,7 @@ MAIN CONTENT LAYOUT
                         </li>
                         <li>
                             <i class="si si-pencil text-info"></i>
-                            <div class="font-w600">You edited the file</div>
+                            <div class="font-w600">Редаговані файли</div>
                             <div>
                                 <a href="javascript:void(0)">
                                     <i class="fa fa-file-text-o"></i> Docs.doc
@@ -196,23 +196,16 @@ MAIN CONTENT LAYOUT
                         </li>
                         <li>
                             <i class="si si-plus text-success"></i>
-                            <div class="font-w600">New user</div>
+                            <div class="font-w600">Нові користувачі</div>
                             <div>
                                 <a href="javascript:void(0)">StudioWeb - View Profile</a>
                             </div>
                             <div class="font-size-xs text-muted">5 hours ago</div>
                         </li>
-                        <li>
-                            <i class="si si-wrench text-warning"></i>
-                            <div class="font-w600">Core v3.9 is available</div>
-                            <div>
-                                <a href="javascript:void(0)">Update now</a>
-                            </div>
-                            <div class="font-size-xs text-muted">8 hours ago</div>
-                        </li>
+
                         <li>
                             <i class="si si-user-follow text-pulse"></i>
-                            <div class="font-w600">+1 Friend Request</div>
+                            <div class="font-w600">+1 Заявка</div>
                             <div>
                                 <a href="javascript:void(0)">Accept</a>
                             </div>
@@ -257,8 +250,8 @@ MAIN CONTENT LAYOUT
                     <div class="content-header-item">
                         <a class="link-effect font-w700" href="index.html">
                             <i class="si si-fire text-primary"></i>
-                            <span class="font-size-xl text-dual-primary-dark">code</span><span
-                                class="font-size-xl text-primary">base</span>
+                            <span class="font-size-xl text-dual-primary-dark">Bl</span><span
+                                class="font-size-xl text-primary">English</span>
                         </a>
                     </div>
                     <!-- END Logo -->
@@ -271,7 +264,7 @@ MAIN CONTENT LAYOUT
             <div class="content-side content-side-full bg-black-op-10">
                 <button type="button" class="btn btn-sm btn-block btn-hero btn-alt-success" data-toggle="modal"
                         data-target="#exampleModalCenter">
-                    <i class="fa fa-briefcase mr-5"></i> New lesson
+                    <i class="fa fa-briefcase mr-5"></i> Створити урок
                 </button>
 
 
@@ -283,11 +276,13 @@ MAIN CONTENT LAYOUT
                 <ul class="nav-main">
                     <li>
                         <a class="active" href="{{asset('/english')}}"><i class="si si-home"></i><span
-                                class="sidebar-mini-hide">Main <span
-                                    class="badge badge-pill badge-primary ml-5">3</span></span></a>
+                                class="sidebar-mini-hide">Перейти на сайт
+{{--                                <span--}}
+{{--                                    class="badge badge-pill badge-primary ml-5">3</span>--}}
+                            </span></a>
                     </li>
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">PR</span><span
-                            class="sidebar-mini-hidden">Pages</span></li>
+                            class="sidebar-mini-hidden">Головні сторінки</span></li>
 
                     <li>
                         <a href="{{asset('english/speak')}}"><i class="si si-docs"></i><span class="sidebar-mini-hide">Speak</span></a>
@@ -304,28 +299,12 @@ MAIN CONTENT LAYOUT
                     </li>
 
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">ST</span><span
-                            class="sidebar-mini-hidden">Settings</span></li>
+                            class="sidebar-mini-hidden">Налаштування</span></li>
+
                     <li>
-                        <a href=""><i class="si si-fire"></i><span class="sidebar-mini-hide">Security</span></a>
+                        <a href=""><i class="si si-lock"></i><span class="sidebar-mini-hide">Налаштування паролю</span></a>
                     </li>
-                    <li>
-                        <a href=""><i class="si si-pencil"></i><span class="sidebar-mini-hide">Profile</span></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-flag"></i><span class="sidebar-mini-hide">Notifications</span></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-lock"></i><span class="sidebar-mini-hide">Password Update</span></a>
-                    </li>
-                    <li class="nav-main-heading"><span class="sidebar-mini-visible">HP</span><span
-                            class="sidebar-mini-hidden">Help</span></li>
-                    <li>
-                        <a href=""><i class="si si-notebook"></i><span
-                                class="sidebar-mini-hide">Knowledge Base</span></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-envelope"></i><span class="sidebar-mini-hide">Contact Us</span></a>
-                    </li>
+
                 </ul>
             </div>
             <!-- END Side Navigation -->
@@ -338,7 +317,7 @@ MAIN CONTENT LAYOUT
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Виберіть тему:</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -486,7 +465,7 @@ MAIN CONTENT LAYOUT
                         <div class="block block-rounded block-themed block-transparent bg-black-op">
                             <div class="block-header bg-transparent">
                                 <h3 class="block-title">
-                                    Sales <small>This week</small>
+                                    Прогрес <small>Цього тижня</small>
                                 </h3>
                                 <div class="block-options">
                                     <button type="button" class="btn-block-option" data-toggle="block-option"
@@ -508,22 +487,22 @@ MAIN CONTENT LAYOUT
                             <div class="block-content">
                                 <div class="row items-push">
                                     <div class="col-6 col-sm-4 text-center text-sm-left">
-                                        <div class="font-size-sm font-w600 text-uppercase text-muted">This Month</div>
-                                        <div class="font-size-h4 font-w600">720</div>
+                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Говоріння</div>
+                                        <div class="font-size-h4 text-white font-w600">720</div>
                                         <div class="font-w600 text-success">
                                             <i class="fa fa-caret-up"></i> +16%
                                         </div>
                                     </div>
                                     <div class="col-6 col-sm-4 text-center text-sm-left">
-                                        <div class="font-size-sm font-w600 text-uppercase text-muted">This Week</div>
-                                        <div class="font-size-h4 font-w600">160</div>
+                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Граматика</div>
+                                        <div class="font-size-h4  text-white font-w600">160</div>
                                         <div class="font-w600 text-danger">
                                             <i class="fa fa-caret-down"></i> -3%
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-4 text-center text-sm-left">
-                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Average</div>
-                                        <div class="font-size-h4 font-w600">24.3</div>
+                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Слова</div>
+                                        <div class="font-size-h4 text-white  font-w600">24.3</div>
                                         <div class="font-w600 text-success">
                                             <i class="fa fa-caret-up"></i> +9%
                                         </div>
@@ -536,7 +515,7 @@ MAIN CONTENT LAYOUT
                         <div class="block block-rounded block-themed block-transparent bg-black-op">
                             <div class="block-header bg-transparent">
                                 <h3 class="block-title">
-                                    Earnings <small>This week</small>
+                                    Прогрес <small>Цього місяця</small>
                                 </h3>
                                 <div class="block-options">
                                     <button type="button" class="btn-block-option" data-toggle="block-option"
@@ -558,22 +537,22 @@ MAIN CONTENT LAYOUT
                             <div class="block-content">
                                 <div class="row items-push">
                                     <div class="col-6 col-sm-4 text-center text-sm-left">
-                                        <div class="font-size-sm font-w600 text-uppercase text-muted">This Month</div>
-                                        <div class="font-size-h4 font-w600">$ 6,540</div>
+                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Говоріння</div>
+                                        <div class="font-size-h4 text-white font-w600">540</div>
                                         <div class="font-w600 text-success">
                                             <i class="fa fa-caret-up"></i> +4%
                                         </div>
                                     </div>
                                     <div class="col-6 col-sm-4 text-center text-sm-left">
-                                        <div class="font-size-sm font-w600 text-uppercase text-muted">This Week</div>
-                                        <div class="font-size-h4 font-w600">$ 1,525</div>
+                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Граматика</div>
+                                        <div class="font-size-h4 text-white font-w600">525</div>
                                         <div class="font-w600 text-danger">
                                             <i class="fa fa-caret-down"></i> -7%
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-4 text-center text-sm-left">
-                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Balance</div>
-                                        <div class="font-size-h4 font-w600">$ 9,352</div>
+                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Слова</div>
+                                        <div class="font-size-h4 text-white font-w600">352</div>
                                         <div class="font-w600 text-success">
                                             <i class="fa fa-caret-up"></i> +35%
                                         </div>
@@ -584,33 +563,12 @@ MAIN CONTENT LAYOUT
                     </div>
                     <!-- END Row #2 -->
                 </div>
-
-
-                <div class="row">
-
-                    <div class="col-sm-3">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card bg-light mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Light card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+
+
+
+
         <!-- END Page Content -->
 
     </main>

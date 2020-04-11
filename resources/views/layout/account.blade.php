@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="uk" >
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link id="CSSsource" rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="{{asset('fonts/font-awesome.min.css')}}">
-    <title>Title</title>
+    <title >Title</title>
 </head>
-
-<body class="allbg m-0 p-0">
+<body class=" allbg m-0 p-0"  >
 <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand" href="{{url('/english')}}">BlEnglish</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -45,8 +44,8 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/account')}}" >
-                    <i class=" fa fa-user-circle" href="{{url('/english/account')}}" style="font-size: 25px;"></i>
+                <a class="nav-link">
+                    <i class=" fa fa-user-circle" style="font-size: 25px;"></i>
                 </a>
 
             </li>
@@ -54,30 +53,66 @@
     </div>
 
 </nav>
-<div class="row allbg m-0">
+<div class="row m-0 allbg ">
     <div class="col-md-10 mx-auto  text-right my-2">
         <button type="button"     class="btn  text-center  mx-xl-1  " style="display: inline-block" onclick="plusSize()" ><b>Збільшитити</b></button>
         <button type="button"     class="btn  text-center " style="display: inline-block"  onclick="minusSize()" ><b>Зменшити</b></button>
     </div>
 </div>
+<div class="container">
+<div class="row mb-5 m-0  allbg">
 
-@foreach($grammar as $g)
-<div class="row  m-0">
-    <div class="col-md-10 mx-auto mb-3   border shadow ">
-        <img src="{{ asset('upload/'.$g->image)}}" class="img-fluid  p-3" id="myImg" style="width: 300px; height: 150px;" alt="">
-        <p lang="en" class="my-5 ml-5 p text-left font-weight-bold"
-           style=" display: inline-block; letter-spacing: 2px;">{{$g->title}}</p>
-        <button lang="uk" type="button" class="btn my-5 mr-5 p"  onClick='location.href="{{route('grammar.show',$g->id)}}"' style="float: right;">Перейти до вивчення
-        </button>
+
+            <div class="col-md-4 py-2">
+                <img class=" mx-auto" style="height: 350px;  width: 350px"
+                     src="{{ asset('image/user.svg')}}">
+            </div>
+            <div class="col-md-8">
+<h2 class="my-5">Kate Levoniuk</h2>
+                <p lang="uk" class="p">Мій прогрес</p>
+                <p lang="uk" class="p">Рівень володіння : Середній</p>
+
+
+
+
     </div>
 </div>
-@endforeach
+
+
+
+
+
+<div class="row pb-5  m-0 p-0 ">
+    <div class="col-md-2 pb-1 mx-auto border shadow  my-2 text-left">
+        <h4 class="text-center" > <b style="font-size: 40px;">2 </b>Рівень</h4>
+        <img class="img-fluid" style=""
+             src="{{ asset('image/statistics.svg')}}">
+    </div>
+
+    <div class="col-md-4 pb-3 mx-auto border shadow  my-2 text-left">
+        <p class="p mt-5 text-center">Зароблено сьогодні</p>
+        <h4 class="text-center" > <b style="font-size: 40px;">100  </b>Балів</h4>
+
+    </div>
+
+    <div class="col-md-4 pb-3 mx-auto border shadow  my-2 text-left">
+        <p class="p mt-5 text-center">Вивчено слів</p>
+        <h4 class="text-center" > <b style="font-size: 40px;">50  </b>Слів</h4>
+
+</div>
+
+
+
+</div>
+</div>
+
+
 
 <script rel="script" src="{{asset('js/sr.js')}}"></script>
 <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous">
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
 </script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.js')}}"></script>

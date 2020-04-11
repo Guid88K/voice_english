@@ -1,6 +1,9 @@
 .navbar{
     background-color: #01161E;
 }
+.btnplusminus{
+    background-color: #e9ecef;
+}
 
 #box4{
     background-color: #e9ecef;
@@ -52,3 +55,17 @@ color: #01161E;
 #search{
     background-color: #ffffff;
 }
+.alphabet{
+    background-color: #ffffff;
+}
+.navbar-brand:hover{
+    color: #ffffff;
+}
+.navbar-brand{
+    color: #ffffff;
+}
+#box3{
+    height: 500px;
+}
+
+#foobar { display: none }

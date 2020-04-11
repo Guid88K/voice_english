@@ -2,16 +2,19 @@
     background-color: #6f42c1;
 }
 
+.btnplusminus{
+    background-color: #e9ecef;
+}
 #box4{
-     background-color: #20c997;
+    background-color: #e9ecef;
  }
 
 .h1{
-    color: #0b2e13;
+    color:  #69306D;
 }
 
-p{
-    color: #ced4da;
+p ,.txt{
+    color:  #69306D;
 }
 
 .nav-link{
@@ -43,6 +46,21 @@ p{
     letter-spacing: 2px;
 }
 
-#search{
-    background-color: #4c110f;
+
+html, .allbg{
+    background-color: #007bff;!important;
+}
+
+.navbar-dark .navbar-brand{
+    color:  darkblue;
+}
+
+.navbar-dark .navbar-brand:hover{
+    color:  darkblue;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color:  darkblue;
+}
+.navbar-brand{
+    color:  darkblue;
 }

@@ -2,12 +2,8 @@
     background-color: #0E103D;
 }
 
-.nav-link{
-    color: #69306D;
-}
-
-.nav-link:hover{
-    color: #e9ecef;
+.btnplusminus{
+    background-color: #A5668B;
 }
 
 #box4{
@@ -23,7 +19,7 @@ h1{
 }
 
 p{
-color: #D3BCC0;
+    color: #69306D;
 }
 
 .btn{
@@ -48,4 +44,27 @@ color: #D3BCC0;
 
 #search{
     background-color: #4c110f;
+}
+
+.alphabet{
+    background-color: #4c110f;
+}
+
+ .allbg {
+     background-color: #A5668B;
+ }
+
+
+.navbar-dark .navbar-brand{
+    color: #69306D;
+}
+
+.navbar-dark .navbar-brand:hover{
+    color: #69306D;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: #69306D;
+}
+.navbar-brand{
+    color: #69306D;
 }
