@@ -130,7 +130,7 @@
 
 <div class="row my-3 m-0 p-0">
     <div class="col-md-10 mx-auto">
-        <h3>Дивтонги</h3>
+        <h3>Дифтонги</h3>
     </div>
     <div class="col-md-10 mx-auto mb-4">
         <button class="shortvowel p btn" onclick="new Audio('{{asset('music/ai-train.mp3')}}').play(); return false;">ei</button>

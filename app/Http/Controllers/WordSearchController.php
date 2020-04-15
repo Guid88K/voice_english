@@ -10,10 +10,10 @@ class WordSearchController extends Controller
 {
     public function search(Request $request)
     {
-        $dictionary = DB::table('dictionaries')->where('word', 'like', '%' . $request->word . '%')->get();
+        $dictionary = DB::table('dictionaries')->where('word', 'like',  $request->word . '%')->get();
 
         if (!(count($dictionary) > 0)) {
-            $dictionary = DB::table('dictionaries')->where('translate_word', 'like', '%' . $request->word . '%')->get();
+            $dictionary = DB::table('dictionaries')->where('translate_word', 'like',  $request->word . '%')->get();
 
         }
 
