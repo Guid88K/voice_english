@@ -82,11 +82,12 @@ class SpeakController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id)
     {
-        //
+        $speaks = Speak::find($id);
+        return view('speak.edit',compact('speaks'));
     }
 
     /**
@@ -98,17 +99,47 @@ class SpeakController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $speak = Speak::find($id);
+        $speak->title = $request->title;
+        if ($request->file('image') == null){
+            $file = $request->file('image');
+            $destinationPath = 'upload';
+            $file->move($destinationPath, $file->getClientOriginalName());
+            $speak->image = $file->getClientOriginalName();
+        }
+
+        $detail = $request->input('detail');
+        $dom = new DomDocument();
+        $dom->loadHtml($detail, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $k => $img) {
+            $data = $img->getAttribute('src');
+            list($type, $data) = explode(';', $data);
+            list(, $data) = explode(',', $data);
+            $data = base64_decode($data);
+            $image_name = "/upload/" . time() . $k . '.png';
+            $picture = $image_name;
+            $path = public_path() . $image_name;
+            file_put_contents($path, $data);
+            $img->removeAttribute('src');
+            $img->setAttribute('src', $image_name);
+
+        }
+        $speak->content = $detail;
+        $speak->save();
+        return redirect('/admin/english');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function destroy($id)
     {
-        //
+        $speak = Speak::find($id);
+        $speak->delete();
+        return redirect('admin/english');
     }
 }

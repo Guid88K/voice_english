@@ -278,7 +278,7 @@ MAIN CONTENT LAYOUT
                         <a class="active" href="{{asset('/english')}}"><i class="si si-home"></i><span
                                 class="sidebar-mini-hide">Перейти на сайт
 {{--                                <span--}}
-{{--                                    class="badge badge-pill badge-primary ml-5">3</span>--}}
+                                {{--                                    class="badge badge-pill badge-primary ml-5">3</span>--}}
                             </span></a>
                     </li>
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">PR</span><span
@@ -288,14 +288,16 @@ MAIN CONTENT LAYOUT
                         <a href="{{asset('english/speak')}}"><i class="si si-docs"></i><span class="sidebar-mini-hide">Speak</span></a>
                     </li>
                     <li>
-                        <a href="{{asset('english/grammar')}}"><i class="si si-users"></i><span class="sidebar-mini-hide">Grammar</span></a>
+                        <a href="{{asset('english/grammar')}}"><i class="si si-users"></i><span
+                                class="sidebar-mini-hide">Grammar</span></a>
                     </li>
                     <li>
                         <a href="{{asset('english/dictionary')}}"><i class="si si-wallet"></i><span
                                 class="sidebar-mini-hide">Dictionary</span></a>
                     </li>
                     <li>
-                        <a href="{{asset('english/phonetics')}}"><i class="si si-energy"></i><span class="sidebar-mini-hide">Phonetics</span></a>
+                        <a href="{{asset('english/phonetics')}}"><i class="si si-energy"></i><span
+                                class="sidebar-mini-hide">Phonetics</span></a>
                     </li>
 
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">ST</span><span
@@ -566,187 +568,184 @@ MAIN CONTENT LAYOUT
 
                 <h2 class="mt-5 text-light">Граматика</h2>
                 <div class="m-0 row mb-5 mx-auto" style=" width: 980px;
-
                      height: 198px;
-
-
-
                 overflow: auto">
                     <div class="col-md-12">
-                        <div class="row  mb-5 "   >
-                            <div class="col-md-4">
-                                <div class="card p-3 border" style="width: 18rem;">
+                        <div class="row  mb-5 ">
+                            @foreach($grammar as $g)
+                                <div class="col-md-4">
 
-                                    <div class="card-body ">
-                                        <h5 class="card-title text-light">Present Simple</h5>
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-dark">Редагувати</a>
-                                        <a href="#" class="btn btn-dark">Видалити</a>
+                                    <div class="card p-3 border" style="width: 18rem;">
+
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light">{{$g->title}}</h5>
+                                            {{--                                            <p class="card-text text-light">{{$g->content}}</p>--}}
+                                            <p class="card-text text-light"> {{mb_strcut(strip_tags($g->content),0,20)."..."}}</p>
+                                            <a href="{{route('grammar.edit',$g->id)}}" class="btn btn-dark">Редагувати</a>
+                                            <a href="#" class="btn btn-dark">Видалити</a>
+                                        </div>
                                     </div>
+
                                 </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card p-3 border" style="width: 18rem;">
+                            @endforeach
 
-                                    <div class="card-body">
-                                        <h5 class="card-title text-light">Past Simple</h5>
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-dark">Редагувати</a>
-                                        <a href="#" class="btn btn-dark">Видалити</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card p-3 border" style="width: 18rem;">
+                            {{--                            <div class="col-md-4">--}}
+                            {{--                                <div class="card p-3 border" style="width: 18rem;">--}}
 
-                                    <div class="card-body">
-                                        <h5 class="card-title text-light">Present Perfect</h5>
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-dark">Редагувати</a>
-                                        <a href="#" class="btn btn-dark">Видалити</a>
-                                    </div>
-                                </div>
+                            {{--                                    <div class="card-body">--}}
+                            {{--                                        <h5 class="card-title text-light">Present Perfect</h5>--}}
+                            {{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+                            {{--                                            title and make up the bulk of the card's content.</p>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
 
-                            </div>
+                            {{--                            </div>--}}
 
-                        </div>
+                            {{--                        </div>--}}
 
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row   "   >
-                            <div class="col-md-4">
-                                <div class="card p-3 border" style="width: 18rem;">
+                            {{--                    </div>--}}
+                            {{--                    <div class="col-md-12">--}}
+                            {{--                        <div class="row   ">--}}
+                            {{--                            <div class="col-md-4">--}}
+                            {{--                                <div class="card p-3 border" style="width: 18rem;">--}}
 
-                                    <div class="card-body ">
-                                        <h5 class="card-title text-light">Present Simple</h5>
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-dark">Редагувати</a>
-                                        <a href="#" class="btn btn-dark">Видалити</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card p-3 border" style="width: 18rem;">
+                            {{--                                    <div class="card-body ">--}}
+                            {{--                                        <h5 class="card-title text-light">Present Simple</h5>--}}
+                            {{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+                            {{--                                            title and make up the bulk of the card's content.</p>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
+                            {{--                            <div class="col-md-4">--}}
+                            {{--                                <div class="card p-3 border" style="width: 18rem;">--}}
 
-                                    <div class="card-body">
-                                        <h5 class="card-title text-light">Past Simple</h5>
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-dark">Редагувати</a>
-                                        <a href="#" class="btn btn-dark">Видалити</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card p-3 border" style="width: 18rem;">
+                            {{--                                    <div class="card-body">--}}
+                            {{--                                        <h5 class="card-title text-light">Past Simple</h5>--}}
+                            {{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+                            {{--                                            title and make up the bulk of the card's content.</p>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
+                            {{--                            <div class="col-md-4">--}}
+                            {{--                                <div class="card p-3 border" style="width: 18rem;">--}}
 
-                                    <div class="card-body">
-                                        <h5 class="card-title text-light">Present Perfect</h5>
-                                        <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-dark">Редагувати</a>
-                                        <a href="#" class="btn btn-dark">Видалити</a>
-                                    </div>
-                                </div>
+                            {{--                                    <div class="card-body">--}}
+                            {{--                                        <h5 class="card-title text-light">Present Perfect</h5>--}}
+                            {{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+                            {{--                                            title and make up the bulk of the card's content.</p>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+                            {{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+                            {{--                                    </div>--}}
+                            {{--                                </div>--}}
 
-                            </div>
+                            {{--                            </div>--}}
 
                         </div>
                     </div>
                 </div>
 
 
-                    <h2 class="mt-5 text-light">Говоріння</h2>
+                <h2 class="mt-5 text-light">Говоріння</h2>
                 <div class="m-0 row mb-5 mx-auto" style=" width: 980px;
-
                      height: 198px;
-
-
-
                 overflow: auto">
                     <div class="col-md-12">
-                <div class="row  mb-5 "   >
-                    <div class="col-md-4">
-                        <div class="card p-3 border" style="width: 18rem;">
+                        <div class="row  mb-5 ">
+                            @foreach($speak as $s)
+                                <div class="col-md-4">
+                                    <div class="card p-3 border" style="width: 18rem;">
 
-                            <div class="card-body ">
-                                <h5 class="card-title text-light">Present Simple</h5>
-                                <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-dark">Редагувати</a>
-                                <a href="#" class="btn btn-dark">Видалити</a>
-                            </div>
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light">{{$s->title}}</h5>
+                                            <p class="card-text text-light"> {{mb_strcut(strip_tags($s->content),0,20)."..."}}</p>
+                                            <a href="{{route('speak.edit',$s->id)}}" class="btn btn-dark">Редагувати</a>
+                                            <a href="#" class="btn btn-dark">Видалити</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            @endforeach
+{{--                            <div class="col-md-4">--}}
+{{--                                <div class="card p-3 border" style="width: 18rem;">--}}
+
+{{--                                    <div class="card-body">--}}
+{{--                                        <h5 class="card-title text-light">Past Simple</h5>--}}
+{{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+{{--                                            title and make up the bulk of the card's content.</p>--}}
+{{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+{{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-4">--}}
+{{--                                <div class="card p-3 border" style="width: 18rem;">--}}
+
+{{--                                    <div class="card-body">--}}
+{{--                                        <h5 class="card-title text-light">Present Perfect</h5>--}}
+{{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+{{--                                            title and make up the bulk of the card's content.</p>--}}
+{{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+{{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+
+{{--                            </div>--}}
+
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 border" style="width: 18rem;">
-
-                            <div class="card-body">
-                                <h5 class="card-title text-light">Past Simple</h5>
-                                <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-dark">Редагувати</a>
-                                <a href="#" class="btn btn-dark">Видалити</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card p-3 border" style="width: 18rem;">
-
-                            <div class="card-body">
-                                <h5 class="card-title text-light">Present Perfect</h5>
-                                <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-dark">Редагувати</a>
-                                <a href="#" class="btn btn-dark">Видалити</a>
-                            </div>
-                        </div>
 
                     </div>
+{{--                    <div class="col-md-12">--}}
+{{--                        <div class="row   ">--}}
+{{--                            <div class="col-md-4">--}}
+{{--                                <div class="card p-3 border" style="width: 18rem;">--}}
+
+{{--                                    <div class="card-body ">--}}
+{{--                                        <h5 class="card-title text-light">Present Simple</h5>--}}
+{{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+{{--                                            title and make up the bulk of the card's content.</p>--}}
+{{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+{{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-4">--}}
+{{--                                <div class="card p-3 border" style="width: 18rem;">--}}
+
+{{--                                    <div class="card-body">--}}
+{{--                                        <h5 class="card-title text-light">Past Simple</h5>--}}
+{{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+{{--                                            title and make up the bulk of the card's content.</p>--}}
+{{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+{{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-md-4">--}}
+{{--                                <div class="card p-3 border" style="width: 18rem;">--}}
+
+{{--                                    <div class="card-body">--}}
+{{--                                        <h5 class="card-title text-light">Present Perfect</h5>--}}
+{{--                                        <p class="card-text text-light">Some quick example text to build on the card--}}
+{{--                                            title and make up the bulk of the card's content.</p>--}}
+{{--                                        <a href="#" class="btn btn-dark">Редагувати</a>--}}
+{{--                                        <a href="#" class="btn btn-dark">Видалити</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+
+{{--                            </div>--}}
+
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                 </div>
-
-                </div>
-                    <div class="col-md-12">
-                    <div class="row   "   >
-                        <div class="col-md-4">
-                            <div class="card p-3 border" style="width: 18rem;">
-
-                                <div class="card-body ">
-                                    <h5 class="card-title text-light">Present Simple</h5>
-                                    <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-dark">Редагувати</a>
-                                    <a href="#" class="btn btn-dark">Видалити</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card p-3 border" style="width: 18rem;">
-
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">Past Simple</h5>
-                                    <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-dark">Редагувати</a>
-                                    <a href="#" class="btn btn-dark">Видалити</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card p-3 border" style="width: 18rem;">
-
-                                <div class="card-body">
-                                    <h5 class="card-title text-light">Present Perfect</h5>
-                                    <p class="card-text text-light">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-dark">Редагувати</a>
-                                    <a href="#" class="btn btn-dark">Видалити</a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    </div>
-
-</div>
             </div>
         </div>
-
-
 
 
         <!-- END Page Content -->

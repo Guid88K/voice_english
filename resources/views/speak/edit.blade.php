@@ -485,12 +485,13 @@ MAIN CONTENT LAYOUT
         <div class="content">
 
             <h2 class="content-heading">Add speak lesson</h2>
-            <form method="post" action="{{ route('speak.update') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('speak.update',$speaks->id) }}" enctype="multipart/form-data">
                 <div class="col-md-6">
                     <div class="form-group">
+                        @method('PATCH')
                         @csrf
                         <label for="name">Заголовок</label>
-                        <input type="text" autocomplete="off" class="form-control" name="title" />
+                        <input type="text" autocomplete="off" class="form-control" name="title" value="{{$speaks->title}}"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -502,7 +503,7 @@ MAIN CONTENT LAYOUT
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="text">Текст</label>
-                                <textarea class="form-control summernote" name="detail"></textarea>
+                                <textarea class="form-control summernote" name="detail">{{$speaks->content}}</textarea>
                             </div>
                         </div>
                     </div>

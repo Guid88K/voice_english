@@ -15,7 +15,7 @@ class GrammarController extends Controller
      */
     public function index()
     {
-         $grammar = Grammar::all();
+        $grammar = Grammar::all();
         return view('grammar.grammar', ['grammar' => $grammar]);
     }
 
@@ -32,7 +32,7 @@ class GrammarController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(Request $request)
@@ -68,7 +68,7 @@ class GrammarController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id)
@@ -80,34 +80,66 @@ class GrammarController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id)
     {
-        //
+        $grammars = Grammar::find($id);
+        return view('grammar.edit',compact('grammars'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $grammar = Grammar::find($id);
+        $grammar->title = $request->title;
+        if (!($request->file('image') == null)){
+
+            $file = $request->file('image');
+            $destinationPath = 'upload';
+            $file->move($destinationPath, $file->getClientOriginalName());
+            $grammar->image = $file->getClientOriginalName();
+        }
+
+        $detail = $request->input('detail');
+        $dom = new DomDocument();
+        $dom->loadHtml($detail, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $k => $img) {
+            $data = $img->getAttribute('src');
+            list($type, $data) = explode(';', $data);
+            list(, $data) = explode(',', $data);
+            $data = base64_decode($data);
+            $image_name = "/upload/" . time() . $k . '.png';
+            $picture = $image_name;
+            $path = public_path() . $image_name;
+            file_put_contents($path, $data);
+            $img->removeAttribute('src');
+            $img->setAttribute('src', $image_name);
+
+        }
+        $grammar->content = $detail;
+        $grammar->save();
+        return redirect('/admin/english');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function destroy($id)
     {
-        //
+        $grammar = Grammar::find($id);
+        $grammar->delete();
+        return redirect('admin/english');
     }
 }
