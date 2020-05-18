@@ -18,6 +18,10 @@ class CreateSpeaksTable extends Migration
             $table->string('image');
             $table->string('title');
             $table->longText('content');
+            $table->string('image_pronatop')->default('null');
+            $table->string('image_deutaron')->default('null');
+            $table->string('image_trunatop')->default('null');
+            $table->string('image_axromatopsia')->default('null');
             $table->timestamps();
         });
     }

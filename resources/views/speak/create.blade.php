@@ -298,14 +298,16 @@ MAIN CONTENT LAYOUT
                         <a href="{{asset('english/speak')}}"><i class="si si-docs"></i><span class="sidebar-mini-hide">Speak</span></a>
                     </li>
                     <li>
-                        <a href="{{asset('english/grammar')}}"><i class="si si-users"></i><span class="sidebar-mini-hide">Grammar</span></a>
+                        <a href="{{asset('english/grammar')}}"><i class="si si-users"></i><span
+                                class="sidebar-mini-hide">Grammar</span></a>
                     </li>
                     <li>
                         <a href="{{asset('english/dictionary')}}"><i class="si si-wallet"></i><span
                                 class="sidebar-mini-hide">Dictionary</span></a>
                     </li>
                     <li>
-                        <a href="{{asset('english/phonetics')}}"><i class="si si-energy"></i><span class="sidebar-mini-hide">Phonetics</span></a>
+                        <a href="{{asset('english/phonetics')}}"><i class="si si-energy"></i><span
+                                class="sidebar-mini-hide">Phonetics</span></a>
                     </li>
 
                     <li class="nav-main-heading"><span class="sidebar-mini-visible">ST</span><span
@@ -485,17 +487,33 @@ MAIN CONTENT LAYOUT
         <div class="content">
 
             <h2 class="content-heading">Add speak lesson</h2>
-            <form method="post" action="{{ route('speak.update') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('speak.store') }}" enctype="multipart/form-data">
                 <div class="col-md-6">
                     <div class="form-group">
                         @csrf
                         <label for="name">Заголовок</label>
-                        <input type="text" autocomplete="off" class="form-control" name="title" />
+                        <input type="text" autocomplete="off" class="form-control" name="title"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Example file input</label>
+                    <label for="exampleFormControlFile1">Головна картинка</label>
                     <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Пронатоп картинка</label>
+                    <input type="file" name="p_image" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Дейтараноп картинка</label>
+                    <input type="file" name="d_image" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Тринатоп картинка</label>
+                    <input type="file" name="t_image" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Ахроматопсія картинка</label>
+                    <input type="file" name="a_image" class="form-control-file" id="exampleFormControlFile1">
                 </div>
                 <div class="row">
                     <div class="col">

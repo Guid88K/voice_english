@@ -39,11 +39,36 @@ class SpeakController extends Controller
     {
         $speak = new Speak();
         $speak->title = $request->title;
-        $file = $request->file('image');
-        $destinationPath = 'upload';
-        $file->move($destinationPath, $file->getClientOriginalName());
-        $speak->image = $file->getClientOriginalName();
-
+        if ($request->file('image') != null) {
+            $file = $request->file('image');
+            $destinationPath = 'upload';
+            $file->move($destinationPath, $file->getClientOriginalName());
+            $speak->image = $file->getClientOriginalName();
+        }
+        if ($request->file('p_image') != null) {
+            $file = $request->file('p_image');
+            $destinationPath = 'upload';
+            $file->move($destinationPath, $file->getClientOriginalName());
+            $speak->image_pronatop = $file->getClientOriginalName();
+        }
+        if ($request->file('d_image') != null) {
+            $file = $request->file('d_image');
+            $destinationPath = 'upload';
+            $file->move($destinationPath, $file->getClientOriginalName());
+            $speak->image_deutaron = $file->getClientOriginalName();
+        }
+        if ($request->file('t_image') != null) {
+            $file = $request->file('t_image');
+            $destinationPath = 'upload';
+            $file->move($destinationPath, $file->getClientOriginalName());
+            $speak->image_trunatop = $file->getClientOriginalName();
+        }
+        if ($request->file('a_image') != null) {
+            $file = $request->file('a_image');
+            $destinationPath = 'upload';
+            $file->move($destinationPath, $file->getClientOriginalName());
+            $speak->image_axromatopsia = $file->getClientOriginalName();
+        }
         $detail = $request->input('detail');
         $dom = new DomDocument();
         $dom->loadHtml($detail, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
@@ -87,7 +112,7 @@ class SpeakController extends Controller
     public function edit($id)
     {
         $speaks = Speak::find($id);
-        return view('speak.edit',compact('speaks'));
+        return view('speak.edit', compact('speaks'));
     }
 
     /**
@@ -101,7 +126,7 @@ class SpeakController extends Controller
     {
         $speak = Speak::find($id);
         $speak->title = $request->title;
-        if ($request->file('image') == null){
+        if ($request->file('image') == null) {
             $file = $request->file('image');
             $destinationPath = 'upload';
             $file->move($destinationPath, $file->getClientOriginalName());
