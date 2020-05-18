@@ -9,6 +9,7 @@
     <title >Title</title>
 </head>
 <body class=" allbg m-0 p-0"  >
+<audio id="my_audio" src="('{{asset('music/Eng.ogg')}}')"></audio>
 <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand" href="{{url('/english')}}">BlEnglish</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

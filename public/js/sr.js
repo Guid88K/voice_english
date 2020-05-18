@@ -1,4 +1,11 @@
-( function( document ) {
+
+window.onload = function() {
+
+    document.getElementById("my_audio").play();
+
+},false;
+(
+    function( document ) {
     'use strict';
 
     let isRunning = false;
@@ -284,5 +291,7 @@ function minusSize() {
         p[i].style.fontSize = s+"px"
     }
 }
+
+
 
 

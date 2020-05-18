@@ -10,7 +10,7 @@
     <title >Title</title>
 </head>
 <body class="container-fluid m-0 p-0"  >
-
+<audio autoplay muted id="my_audio"   src="('{{asset('music/Eng.ogg')}}') "></audio>
 {{--<audio autoplay loop  id="playAudio">--}}
 {{--    <source src="{{asset('music/audio_2020-02-19_22-12-09.ogg')}}">--}}
 {{--</audio>--}}
